@@ -54,5 +54,23 @@ const ap = new APlayer({
             url: 'http://music.163.com/song/media/outer/url?id=1817245482.mp3',
             cover: 'http://p1.music.126.net/Dzok-koT0Q8c5asYc3HQdg==/109951165689102525.jpg?param=130y130',
         },
+        {
+            name: '7AND5-Driftwood',
+            artist: '收录客',
+            url: 'http://music.163.com/song/media/outer/url?id=2045338443.mp3',
+            cover: 'http://p1.music.126.net/2qh0Bg3DCg7Xzx7H9210MA==/109951168594626220.jpg?param=130y130',
+        },
+        {
+            name: '洪荒之力 (纯音乐)',
+            artist: '收录客',
+            url: 'http://music.163.com/song/media/outer/url?id=1948229908.mp3',
+            cover: 'http://p1.music.126.net/YRmEmoTX233z5nh2fjj2Gg==/109951167430907130.jpg?param=130y130',
+        },
+        {
+            name: 'Escape this Moment',
+            artist: '收录客',
+            url: 'http://music.163.com/song/media/outer/url?id=1911627306.mp3',
+            cover: 'http://p2.music.126.net/g-bmkVm5EtA5h7hzBNssLA==/109951166927054264.jpg?param=130y130',
+        },
     ]
 });
