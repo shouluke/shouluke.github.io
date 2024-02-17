@@ -2962,3 +2962,62 @@ body {
   color: #555;
   border: 0px;
 }
+/*相册主页面*/
+.photos-page {
+  margin-top: -50px;
+}
+.photos-list {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.photos-column a {
+  border-bottom: 0px;
+}
+.photos-item {
+  margin-bottom: 50px;
+}
+/*相册标题样式*/
+.photos-item p {
+  margin: -25px auto -10px;
+  max-width: 50%;
+  text-align: center;
+  font-size: 15px;
+  color: #222;
+  background: rgba(255,255,255,0.3);
+  border-radius: 7px;
+  border: 1px solid #222;
+  box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
+}
+/*相册封面显示以及点击面积*/
+.photos-column a img {
+  height: 250px;
+  width: 300px;
+  object-fit: cover;
+}
+.img-list {
+  display: flex;
+  flex-direction: column;
+}
+.img-column {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.img-column a {
+  border-bottom: 0px;
+}
+/*图片显示面积*/
+.img-column a img {
+  height: 280px;
+  width: 330px;
+  object-fit: scale-down;
+}
