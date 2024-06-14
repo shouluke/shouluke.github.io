@@ -1092,8 +1092,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -1106,11 +1106,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -1122,58 +1119,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -1193,22 +1190,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -1320,8 +1310,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -1334,11 +1324,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -1350,58 +1337,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -1421,22 +1408,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -1548,8 +1528,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -1562,11 +1542,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -1578,58 +1555,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -1649,22 +1626,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -1776,8 +1746,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -1790,11 +1760,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -1806,58 +1773,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -1877,22 +1844,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -2004,8 +1964,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -2018,11 +1978,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -2034,58 +1991,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -2105,22 +2062,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -2232,8 +2182,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -2246,11 +2196,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -2262,58 +2209,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -2333,22 +2280,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -2451,8 +2391,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -2465,11 +2405,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -2481,58 +2418,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -2552,22 +2489,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -2679,8 +2609,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -2693,11 +2623,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -2709,58 +2636,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -2780,22 +2707,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -2907,8 +2827,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -2921,11 +2841,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -2937,58 +2854,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -3008,22 +2925,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
     
@@ -3135,8 +3045,8 @@ translateInitilization();
       
 <style>
     .cube_container {
-      width: 50px;
-      height: 60px;
+      width: 100px;
+      height: 100px;
       margin: 0 auto;
       position: fixed;
       z-index: 999;
@@ -3149,11 +3059,8 @@ translateInitilization();
     }
 
     .cube {
-      /*
       width: 100%;
       height: 100%;
-      */
-      width: 0%; /* 大角度旋转 */
       position: absolute;
       -webkit-transform-style: preserve-3d;
       transform-style: preserve-3d;
@@ -3165,58 +3072,58 @@ translateInitilization();
       animation: around 5s cubic-bezier(0.94, -0.6, 0.45, 1.31) infinite;
     }
     .cube div {
-      width: 50px;
-      height: 50px;
+      width: 120px;
+      height: 120px;
       display: block;
       margin: 0;
       position: absolute;
     }
     .cube div a {
       color: white;
-      font-size: 12px;
+      font-size: 8em;
       text-decoration: none;
       text-align: center;
       position: fixed;
       top: 50%;
-      left: 45%;
+      left: 50%;
       -webkit-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
     }
     .cube .front {
-      -webkit-transform: rotateY(0deg) translateZ(25px);
-              transform: rotateY(0deg) translateZ(25px);
+      -webkit-transform: rotateY(0deg) translateZ(60px);
+              transform: rotateY(0deg) translateZ(60px);
       background-color: rgba(0, 191, 255, 0.7);
-      border: 1px solid rgba(0, 191, 255, 0.7);
+      border: 2px solid rgba(0, 191, 255, 0.7);
     }
     .cube .back {
-      -webkit-transform: rotateX(180deg) translateZ(25px);
-              transform: rotateX(180deg) translateZ(25px);
+      -webkit-transform: rotateX(180deg) translateZ(60px);
+              transform: rotateX(180deg) translateZ(60px);
       background-color: rgba(124, 252, 0, 0.7);
-      border: 1px solid rgba(124, 252, 0, 0.7);
+      border: 2px solid rgba(124, 252, 0, 0.7);
     }
     .cube .left {
-      -webkit-transform: rotateY(-90deg) translateZ(25px);
-              transform: rotateY(-90deg) translateZ(25px);
+      -webkit-transform: rotateY(-90deg) translateZ(60px);
+              transform: rotateY(-90deg) translateZ(60px);
       background-color: rgba(255, 215, 0, 0.7);
-      border: 1px solid rgba(255, 215, 0, 0.7);
+      border: 2px solid rgba(255, 215, 0, 0.7);
     }
     .cube .right {
-      -webkit-transform: rotateY(90deg) translateZ(25px);
-              transform: rotateY(90deg) translateZ(25px);
+      -webkit-transform: rotateY(90deg) translateZ(60px);
+              transform: rotateY(90deg) translateZ(60px);
       background-color: rgba(255, 69, 0, 0.7);
-      border: 1px solid rgba(255, 69, 0, 0.7);
+      border: 2px solid rgba(255, 69, 0, 0.7);
     }
     .cube .top {
-      -webkit-transform: rotateX(90deg) translateZ(25px);
-              transform: rotateX(90deg) translateZ(25px);
+      -webkit-transform: rotateX(90deg) translateZ(60px);
+              transform: rotateX(90deg) translateZ(60px);
       background-color: rgba(255, 0, 157, 0.7);
-      border: 1px solid rgba(255, 0, 157, 0.7);
+      border: 2px solid rgba(255, 0, 157, 0.7);
     }
     .cube .bottom {
-      -webkit-transform: rotateX(-90deg) translateZ(25px);
-              transform: rotateX(-90deg) translateZ(25px);
+      -webkit-transform: rotateX(-90deg) translateZ(60px);
+              transform: rotateX(-90deg) translateZ(60px);
       background-color: rgba(184, 111, 220, 0.7);
-      border: 1px solid rgba(184, 111, 220, 0.7);
+      border: 2px solid rgba(184, 111, 220, 0.7);
     }
 
      @-webkit-keyframes around {
@@ -3236,22 +3143,15 @@ translateInitilization();
 
 <div class="cube_container">
 	  <div class="cube">
-	    <div class="front"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="back"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="right"><a onclick="back2top()" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="left"><a onclick="back2top()" role="button" rel="nofollow"> 欢迎光临 </a></div>
-	    <div class="top"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
-	    <div class="bottom"><a href="https://kaobian.github.io" target="_blank" rel="nofollow">  </a></div>
+	    <div class="front"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="back"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="right"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="left"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;">欢迎光临</a></div>
+	    <div class="top"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
+	    <div class="bottom"><a href="https://shouluke.github.io/" target="_blank" rel="nofollow" style="font-size:28px;"></a></div>
 	  </div>
 </div>
 
-<script>
-
-  function back2top(){
-    $('html, body').animate({scrollTop: 0}, 500);
-  }
-
-</script>
    
 
   <nav class="pagination">
