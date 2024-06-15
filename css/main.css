@@ -1325,7 +1325,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #61ff74;
+    background: #0866e5;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -1641,28 +1641,6 @@ pre code {
 }
 .post-toc .nav .active-current > a:hover {
   color: #fc6423;
-}
-.site-state {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  line-height: 1.4;
-}
-.site-state-item {
-  padding: 0 15px;
-}
-.site-state-item a {
-  border-bottom: 0;
-  display: block;
-}
-.site-state-item-count {
-  display: block;
-  font-size: 1em;
-  font-weight: 600;
-}
-.site-state-item-name {
-  color: #999;
-  font-size: 0.8125em;
 }
 .footer {
   color: #0684bd;
