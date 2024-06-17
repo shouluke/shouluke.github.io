@@ -22,108 +22,190 @@
 </blockquote>
 <p>    流程图是表示算法、工作流或过程步骤的优选方式。在Mermaid中，创建流程图就像编写Markdown一样简单：</p>
 <ul>
-<li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">    A[开始] --&gt; B{决策点};</span><br><span class="line">    B -- 是 --&gt; C[执行任务];</span><br><span class="line">    B -- 否 --&gt; D[结束];</span><br><span class="line">    C --&gt; D;</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>图表：</p>
-<pre class="mermaid">graph TD;
-  A[开始] --&gt; B{决策点};
-  B -- 是 --&gt; C[执行任务];
-  B -- 否 --&gt; D[结束];
-  C --&gt; D;</pre></li>
+<li>文本：</li>
 </ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">    A[开始] --&gt; B{决策点};</span><br><span class="line">    B -- 是 --&gt; C[执行任务];</span><br><span class="line">    B -- 否 --&gt; D[结束];</span><br><span class="line">    C --&gt; D;</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">graph TD;
+    A[开始] --&gt; B{决策点};
+    B -- 是 --&gt; C[执行任务];
+    B -- 否 --&gt; D[结束];
+    C --&gt; D;</pre>
+
+<hr>
 <blockquote>
 <p>序列图 (Sequence Diagrams)</p>
 </blockquote>
 <p>    序列图用于展示对象之间的交互，包括消息的发送和接收。它在系统设计和API文档中非常有用：</p>
 <ul>
-<li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant Alice as A</span><br><span class="line">    participant Bob as B</span><br><span class="line">    A-&gt;&gt;B: 天王盖地虎</span><br><span class="line">    B--&gt;&gt;A: 宝塔镇河妖</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>图表：</p>
-<pre class="mermaid">sequenceDiagram
-  participant Alice as A
-  participant Bob as B
-  A-&gt;&gt;B: 天王盖地虎
-  B--&gt;&gt;A: 宝塔镇河妖</pre></li>
+<li>文本：</li>
 </ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant Alice as A</span><br><span class="line">    participant Bob as B</span><br><span class="line">    A-&gt;&gt;B: 天王盖地虎</span><br><span class="line">    B--&gt;&gt;A: 宝塔镇河妖</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">sequenceDiagram
+    participant Alice as A
+    participant Bob as B
+    A-&gt;&gt;B: 天王盖地虎
+    B--&gt;&gt;A: 宝塔镇河妖</pre>
+
+<hr>
 <blockquote>
 <p>甘特图 (Gantt Charts)</p>
 </blockquote>
 <p>    甘特图是项目管理中不可或缺的工具，它帮助项目管理者展示任务和时间线：</p>
 <ul>
-<li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">gantt</span><br><span class="line">    title 项目开发时间线</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 设计</span><br><span class="line">    设计阶段 :done,    des1, 2023-01-06,2023-01-08</span><br><span class="line">    section 开发</span><br><span class="line">    开发阶段 :active,  dev1, after des1, 5d</span><br><span class="line">    section 测试</span><br><span class="line">    测试阶段 :         test1, after dev1, 3d</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>图表：</p>
-<pre class="mermaid">gantt
-  title 项目开发时间线
-  dateFormat  YYYY-MM-DD
-  section 设计
-  设计阶段 :done,    des1, 2023-01-06,2023-01-08
-  section 开发
-  开发阶段 :active,  dev1, after des1, 5d
-  section 测试
-  测试阶段 :         test1, after dev1, 3d</pre></li>
+<li>文本：</li>
 </ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">gantt</span><br><span class="line">    title 项目开发时间线</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 设计</span><br><span class="line">    设计阶段 :done,    des1, 2023-01-06,2023-01-08</span><br><span class="line">    section 开发</span><br><span class="line">    开发阶段 :active,  dev1, after des1, 5d</span><br><span class="line">    section 测试</span><br><span class="line">    测试阶段 :         test1, after dev1, 3d</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">gantt
+    title 项目开发时间线
+    dateFormat  YYYY-MM-DD
+    section 设计
+    设计阶段 :done,    des1, 2023-01-06,2023-01-08
+    section 开发
+    开发阶段 :active,  dev1, after des1, 5d
+    section 测试
+    测试阶段 :         test1, after dev1, 3d</pre>
+
+<hr>
 <blockquote>
 <p>类图 (Class Diagrams)</p>
 </blockquote>
 <p>    类图在面向对象编程中用于展示类之间的关系，它帮助开发者理解系统的结构：</p>
 <ul>
-<li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">    class Animal {</span><br><span class="line">        - name : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    class Dog {</span><br><span class="line">        - breed : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    Animal &lt;|-- Dog</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>图表：</p>
-<pre class="mermaid">classDiagram
-  class Animal {
-      - name : string
-      + speak() : string
-  }
-  class Dog {
-      - breed : string
-      + speak() : string
-  }
-  Animal &lt;|-- Dog</pre></li>
+<li>文本：</li>
 </ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">    class Animal {</span><br><span class="line">        - name : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    class Dog {</span><br><span class="line">        - breed : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    Animal &lt;|-- Dog</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">classDiagram
+    class Animal {
+        - name : string
+        + speak() : string
+    }
+    class Dog {
+        - breed : string
+        + speak() : string
+    }
+    Animal &lt;|-- Dog</pre>
+
+<hr>
 <blockquote>
 <p>状态图 (State Diagrams)</p>
 </blockquote>
 <p>    状态图展示了对象的状态以及状态之间的转换，它在表示系统状态转换时非常有用：</p>
 <ul>
-<li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">    [*] --&gt; Still</span><br><span class="line">    Still --&gt; [*]</span><br><span class="line">    Still --&gt; Moving</span><br><span class="line">    Moving --&gt; Still</span><br><span class="line">    Moving --&gt; Crash</span><br><span class="line">    Crash --&gt; [*]</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>图表：</p>
-<pre class="mermaid">stateDiagram-v2
-  [*] --&gt; Still
-  Still --&gt; [*]
-  Still --&gt; Moving
-  Moving --&gt; Still
-  Moving --&gt; Crash
-  Crash --&gt; [*]</pre></li>
+<li>文本：</li>
 </ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">    [*] --&gt; Still</span><br><span class="line">    Still --&gt; [*]</span><br><span class="line">    Still --&gt; Moving</span><br><span class="line">    Moving --&gt; Still</span><br><span class="line">    Moving --&gt; Crash</span><br><span class="line">    Crash --&gt; [*]</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">stateDiagram-v2
+    [*] --&gt; Still
+    Still --&gt; [*]
+    Still --&gt; Moving
+    Moving --&gt; Still
+    Moving --&gt; Crash
+    Crash --&gt; [*]</pre>
+
+<hr>
 <blockquote>
 <p>实体关系图 (Entity-Relationship Diagrams)</p>
 </blockquote>
 <p>    实体关系图用于数据建模，展示实体之间的关系，是数据库设计的基础：</p>
 <ul>
-<li>文本：<br>erDiagram<br>  CUSTOMER ||–o{ ORDER : places<br>  ORDER ||–|{ LINE-ITEM : contains<br>  CUSTOMER }|–|| PRODUCT : orders<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 图表：</span><br><span class="line">&lt;pre class="mermaid"&gt;erDiagram</span><br><span class="line">    CUSTOMER ||--o{ ORDER : places</span><br><span class="line">    ORDER ||--|{ LINE-ITEM : contains</span><br><span class="line">    CUSTOMER }|--|| PRODUCT : orders&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&gt;用户旅程图 (User Journey Diagrams)</span><br><span class="line"></span><br><span class="line">&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;用户旅程图展示了用户与系统的交互流程，它在用户体验设计和产品管理中扮演着重要角色：</span><br><span class="line"></span><br><span class="line">* 文本：</span><br></pre></td></tr></tbody></table></figure>
-journey<br>  title 用户旅程图<br>  section 用户注册<br>  注册页面: 显示注册表单<br>  用户填写: 输入信息<br>  提交: 提交表单<br>  section 用户登录<br>  登录页面: 显示登录表单<br>  用户验证: 验证信息<br>  进入系统: 进入主界面<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 图表：</span><br><span class="line">&lt;pre class="mermaid"&gt;journey</span><br><span class="line">    title 用户旅程图</span><br><span class="line">    section 用户注册</span><br><span class="line">    注册页面: 显示注册表单</span><br><span class="line">    用户填写: 输入信息</span><br><span class="line">    提交: 提交表单</span><br><span class="line">    section 用户登录</span><br><span class="line">    登录页面: 显示登录表单</span><br><span class="line">    用户验证: 验证信息</span><br><span class="line">    进入系统: 进入主界面&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&gt;思维导图 (Mind Maps)</span><br><span class="line"></span><br><span class="line">&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;思维导图用于展示思维过程和概念的关联，它是头脑风暴和创意发想的得力助手：</span><br><span class="line"></span><br><span class="line">* 文本：</span><br></pre></td></tr></tbody></table></figure>
-graph LR<br>  A[思维导图] –&gt; B[中心思想]<br>  B –&gt; C[分支1]<br>  B –&gt; D[分支2]<br>  C –&gt; E[子分支1]<br>  C –&gt; F[子分支2]<br>  D –&gt; G[子分支3]<br>  D –&gt; H[子分支4]<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 图表：</span><br><span class="line">&lt;pre class="mermaid"&gt;graph LR</span><br><span class="line">    A[思维导图] --&gt; B[中心思想]</span><br><span class="line">    B --&gt; C[分支1]</span><br><span class="line">    B --&gt; D[分支2]</span><br><span class="line">    C --&gt; E[子分支1]</span><br><span class="line">    C --&gt; F[子分支2]</span><br><span class="line">    D --&gt; G[子分支3]</span><br><span class="line">    D --&gt; H[子分支4]&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&gt;饼图 (Pie Charts)</span><br><span class="line"></span><br><span class="line">&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;饼图用于展示数据的百分比分布，它在市场分析和用户调研中非常有用：</span><br><span class="line"></span><br><span class="line">* 文本：</span><br></pre></td></tr></tbody></table></figure>
-pie<br>title Key elements in Product X<br>“水果” : 25<br>“蔬菜” : 25<br>“肉类” : 20<br>“乳制品” : 15<br>“其他” :  15</li>
+<li>文本：</li>
 </ul>
-<pre><code>
-* 图表：
-&lt;pre class="mermaid"&gt;pie
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">erDiagram</span><br><span class="line">    CUSTOMER ||--o{ ORDER : places</span><br><span class="line">    ORDER ||--|{ LINE-ITEM : contains</span><br><span class="line">    CUSTOMER }|--|| PRODUCT : orders</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE-ITEM : contains
+    CUSTOMER }|--|| PRODUCT : orders</pre>
+
+<hr>
+<blockquote>
+<p>用户旅程图 (User Journey Diagrams)</p>
+</blockquote>
+<p>    用户旅程图展示了用户与系统的交互流程，它在用户体验设计和产品管理中扮演着重要角色：</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">journey</span><br><span class="line">    title 用户旅程图</span><br><span class="line">    section 用户注册</span><br><span class="line">    注册页面: 显示注册表单</span><br><span class="line">    用户填写: 输入信息</span><br><span class="line">    提交: 提交表单</span><br><span class="line">    section 用户登录</span><br><span class="line">    登录页面: 显示登录表单</span><br><span class="line">    用户验证: 验证信息</span><br><span class="line">    进入系统: 进入主界面</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">journey
+    title 用户旅程图
+    section 用户注册
+    注册页面: 显示注册表单
+    用户填写: 输入信息
+    提交: 提交表单
+    section 用户登录
+    登录页面: 显示登录表单
+    用户验证: 验证信息
+    进入系统: 进入主界面</pre>
+
+<hr>
+<blockquote>
+<p>思维导图 (Mind Maps)</p>
+</blockquote>
+<p>    思维导图用于展示思维过程和概念的关联，它是头脑风暴和创意发想的得力助手：</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">graph LR</span><br><span class="line">    A[思维导图] --&gt; B[中心思想]</span><br><span class="line">    B --&gt; C[分支1]</span><br><span class="line">    B --&gt; D[分支2]</span><br><span class="line">    C --&gt; E[子分支1]</span><br><span class="line">    C --&gt; F[子分支2]</span><br><span class="line">    D --&gt; G[子分支3]</span><br><span class="line">    D --&gt; H[子分支4]</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">graph LR
+    A[思维导图] --&gt; B[中心思想]
+    B --&gt; C[分支1]
+    B --&gt; D[分支2]
+    C --&gt; E[子分支1]
+    C --&gt; F[子分支2]
+    D --&gt; G[子分支3]
+    D --&gt; H[子分支4]</pre>
+
+<hr>
+<blockquote>
+<p>饼图 (Pie Charts)</p>
+</blockquote>
+<p>    饼图用于展示数据的百分比分布，它在市场分析和用户调研中非常有用：</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">pie</span><br><span class="line">  title Key elements in Product X</span><br><span class="line">  "水果" : 25</span><br><span class="line">  "蔬菜" : 25</span><br><span class="line">  "肉类" : 20</span><br><span class="line">  "乳制品" : 15</span><br><span class="line">  "其他" :  15</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">pie
   title Key elements in Product X
   "水果" : 25
   "蔬菜" : 25
   "肉类" : 20
   "乳制品" : 15
-  "其他" :  15&lt;/pre&gt;
-</code></pre>
-]]></content>
+  "其他" :  15</pre>]]></content>
       <categories>
         <category>Hexo博客</category>
         <category>NexT主题</category>
