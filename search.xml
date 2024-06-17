@@ -14,107 +14,111 @@
 </ol>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"># Mermaid tag</span><br><span class="line">mermaid:</span><br><span class="line">  enable: true</span><br><span class="line">  # Available themes: default | dark | forest | neutral</span><br><span class="line">  theme:</span><br><span class="line">    light: default</span><br><span class="line">    dark: dark</span><br></pre></td></tr></tbody></table></figure>
 
-<ol>
+<ol start="3">
 <li>在Markdown文档中插入一段Mermaid图表代码，下面是几个mermaid图表实例，很明显文字已经转换成了漂亮的图表。</li>
 </ol>
 <blockquote>
-<p>流程图（FLOWCHART）</p>
+<p>流程图 (Flowcharts)</p>
 </blockquote>
+<p>    流程图是表示算法、工作流或过程步骤的优选方式。在Mermaid中，创建流程图就像编写Markdown一样简单：</p>
 <ul>
 <li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">   A--&gt;B;</span><br><span class="line">   A--&gt;C;</span><br><span class="line">   B--&gt;D;</span><br><span class="line">   C--&gt;D;</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">graph TD;</span><br><span class="line">    A[开始] --&gt; B{决策点};</span><br><span class="line">    B -- 是 --&gt; C[执行任务];</span><br><span class="line">    B -- 否 --&gt; D[结束];</span><br><span class="line">    C --&gt; D;</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>图表：</p>
 <pre class="mermaid">graph TD;
- A--&gt;B;
- A--&gt;C;
- B--&gt;D;
- C--&gt;D;</pre></li>
+  A[开始] --&gt; B{决策点};
+  B -- 是 --&gt; C[执行任务];
+  B -- 否 --&gt; D[结束];
+  C --&gt; D;</pre></li>
 </ul>
 <blockquote>
-<p>时序图（SEQUENCE DIAGRAM）</p>
+<p>序列图 (Sequence Diagrams)</p>
 </blockquote>
+<p>    序列图用于展示对象之间的交互，包括消息的发送和接收。它在系统设计和API文档中非常有用：</p>
 <ul>
-<li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    　　　participant Alice</span><br><span class="line">    　　　participant Bob</span><br><span class="line">    　　　Alice-&gt;John:Hello John, how are you?</span><br><span class="line">    　　　loop Healthcheck</span><br><span class="line">    　　　　　John-&gt;John:Fight against hypochondria</span><br><span class="line">    　　　end</span><br><span class="line">    　　　Note right of John:Rational thoughts &lt;br/&gt;prevail...</span><br><span class="line">    　　　John--&gt;Alice:Great!</span><br><span class="line">    　　　John-&gt;Bob: How about you?</span><br><span class="line">    　　　Bob--&gt;John: Jolly good!</span><br></pre></td></tr></tbody></table></figure>
-</li>
-<li><p>图表：</p>
-<pre class="mermaid">sequenceDiagram
-  　　　participant Alice
-  　　　participant Bob
-  　　　Alice-&gt;John:Hello John, how are you?
-  　　　loop Healthcheck
-  　　　　　John-&gt;John:Fight against hypochondria
-  　　　end
-  　　　Note right of John:Rational thoughts <br>prevail...
-  　　　John--&gt;Alice:Great!
-  　　　John-&gt;Bob: How about you?
-  　　　Bob--&gt;John: Jolly good!</pre></li>
+<li>文本：<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant Alice as A</span><br><span class="line">    participant Bob as B</span><br><span class="line">    A-&gt;&gt;B: 天王盖地虎</span><br><span class="line">    B--&gt;&gt;A: 宝塔镇河妖</span><br></pre></td></tr></tbody></table></figure></li>
+<li>图表：<pre class="mermaid">sequenceDiagram
+  participant Alice as A
+  participant Bob as B
+  A-&gt;&gt;B: 天王盖地虎
+  B--&gt;&gt;A: 宝塔镇河妖</pre></li>
 </ul>
 <blockquote>
-<p>甘特图</p>
+<p>甘特图 (Gantt Charts)</p>
 </blockquote>
+<p>    甘特图是项目管理中不可或缺的工具，它帮助项目管理者展示任务和时间线：</p>
 <ul>
 <li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">gantt</span><br><span class="line">   dateFormat  YYYY-MM-DD</span><br><span class="line">   title Adding GANTT diagram functionality to mermaid</span><br><span class="line">   section A section</span><br><span class="line">   Completed task            :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">   Active task               :active,  des2, 2014-01-09, 3d</span><br><span class="line">   Future task               :         des3, after des2, 5d</span><br><span class="line">   Future task2               :         des4, after des3, 5d</span><br><span class="line">   section Critical tasks</span><br><span class="line">   Completed task in the critical line :crit, done, 2014-01-06,24h</span><br><span class="line">   Implement parser and jison          :crit, done, after des1, 2d</span><br><span class="line">   Create tests for parser             :crit, active, 3d</span><br><span class="line">   Future task in critical line        :crit, 5d</span><br><span class="line">   Create tests for renderer           :2d</span><br><span class="line">   Add to mermaid                      :1d</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">gantt</span><br><span class="line">    title 项目开发时间线</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 设计</span><br><span class="line">    设计阶段 :done,    des1, 2023-01-06,2023-01-08</span><br><span class="line">    section 开发</span><br><span class="line">    开发阶段 :active,  dev1, after des1, 5d</span><br><span class="line">    section 测试</span><br><span class="line">    测试阶段 :         test1, after dev1, 3d</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>图表：</p>
 <pre class="mermaid">gantt
- dateFormat  YYYY-MM-DD
- title Adding GANTT diagram functionality to mermaid
- section A section
- Completed task            :done,    des1, 2014-01-06,2014-01-08
- Active task               :active,  des2, 2014-01-09, 3d
- Future task               :         des3, after des2, 5d
- Future task2               :         des4, after des3, 5d
- section Critical tasks
- Completed task in the critical line :crit, done, 2014-01-06,24h
- Implement parser and jison          :crit, done, after des1, 2d
- Create tests for parser             :crit, active, 3d
- Future task in critical line        :crit, 5d
- Create tests for renderer           :2d
- Add to mermaid                      :1d</pre></li>
+  title 项目开发时间线
+  dateFormat  YYYY-MM-DD
+  section 设计
+  设计阶段 :done,    des1, 2023-01-06,2023-01-08
+  section 开发
+  开发阶段 :active,  dev1, after des1, 5d
+  section 测试
+  测试阶段 :         test1, after dev1, 3d</pre></li>
 </ul>
 <blockquote>
-<p>饼图</p>
+<p>类图 (Class Diagrams)</p>
 </blockquote>
+<p>    类图在面向对象编程中用于展示类之间的关系，它帮助开发者理解系统的结构：</p>
 <ul>
 <li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">pie</span><br><span class="line">  title Key elements in Product X</span><br><span class="line">  "Calcium" : 42.96</span><br><span class="line">  "Potassium" : 50.05</span><br><span class="line">  "Magnesium" : 10.01</span><br><span class="line">  "Iron" :  5</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">    class Animal {</span><br><span class="line">        - name : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    class Dog {</span><br><span class="line">        - breed : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    Animal &lt;|-- Dog</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>图表：</p>
-<pre class="mermaid">pie
-title Key elements in Product X
-"Calcium" : 42.96
-"Potassium" : 50.05
-"Magnesium" : 10.01
-"Iron" :  5</pre></li>
+<pre class="mermaid">classDiagram
+  class Animal {
+      - name : string
+      + speak() : string
+  }
+  class Dog {
+      - breed : string
+      + speak() : string
+  }
+  Animal &lt;|-- Dog</pre></li>
 </ul>
 <blockquote>
-<p>状态图</p>
+<p>状态图 (State Diagrams)</p>
 </blockquote>
+<p>    状态图展示了对象的状态以及状态之间的转换，它在表示系统状态转换时非常有用：</p>
 <ul>
 <li><p>文本：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">stateDiagram</span><br><span class="line"></span><br><span class="line">  [*]--&gt;Active</span><br><span class="line">  state Active {</span><br><span class="line">      [*]--&gt;NumLockOff</span><br><span class="line">      NumLockOff--&gt;NumLockOn : EvNumLockPressed</span><br><span class="line">      NumLockOn--&gt;NumLockOff : EvNumLockPressed</span><br><span class="line">      --</span><br><span class="line">      [*]--&gt;CapsLockOff</span><br><span class="line">      CapsLockOff--&gt;CapsLockOn : EvCapsLockPressed</span><br><span class="line">      CapsLockOn--&gt;CapsLockOff : EvCapsLockPressed</span><br><span class="line">      --</span><br><span class="line">      [*]--&gt;ScrollLockOff</span><br><span class="line">      ScrollLockOff--&gt;ScrollLockOn : EvCapsLockPressed</span><br><span class="line">      ScrollLockOn--&gt;ScrollLockOff : EvCapsLockPressed</span><br><span class="line">          }</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">    [*] --&gt; Still</span><br><span class="line">    Still --&gt; [*]</span><br><span class="line">    Still --&gt; Moving</span><br><span class="line">    Moving --&gt; Still</span><br><span class="line">    Moving --&gt; Crash</span><br><span class="line">    Crash --&gt; [*]</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>图表：</p>
-<pre class="mermaid">stateDiagram
-
-[*]--&gt;Active
-state Active {
-    [*]--&gt;NumLockOff
-    NumLockOff--&gt;NumLockOn : EvNumLockPressed
-    NumLockOn--&gt;NumLockOff : EvNumLockPressed
-    --
-    [*]--&gt;CapsLockOff
-    CapsLockOff--&gt;CapsLockOn : EvCapsLockPressed
-    CapsLockOn--&gt;CapsLockOff : EvCapsLockPressed
-    --
-    [*]--&gt;ScrollLockOff
-    ScrollLockOff--&gt;ScrollLockOn : EvCapsLockPressed
-    ScrollLockOn--&gt;ScrollLockOff : EvCapsLockPressed
-        }</pre></li>
+<pre class="mermaid">stateDiagram-v2
+  [*] --&gt; Still
+  Still --&gt; [*]
+  Still --&gt; Moving
+  Moving --&gt; Still
+  Moving --&gt; Crash
+  Crash --&gt; [*]</pre></li>
 </ul>
+<blockquote>
+<p>实体关系图 (Entity-Relationship Diagrams)</p>
+</blockquote>
+<p>    实体关系图用于数据建模，展示实体之间的关系，是数据库设计的基础：</p>
+<ul>
+<li>文本：<br>erDiagram<br>  CUSTOMER ||–o{ ORDER : places<br>  ORDER ||–|{ LINE-ITEM : contains<br>  CUSTOMER }|–|| PRODUCT : orders<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 图表：</span><br><span class="line">&lt;pre class="mermaid"&gt;erDiagram</span><br><span class="line">    CUSTOMER ||--o{ ORDER : places</span><br><span class="line">    ORDER ||--|{ LINE-ITEM : contains</span><br><span class="line">    CUSTOMER }|--|| PRODUCT : orders&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&gt;用户旅程图 (User Journey Diagrams)</span><br><span class="line"></span><br><span class="line">&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;用户旅程图展示了用户与系统的交互流程，它在用户体验设计和产品管理中扮演着重要角色：</span><br><span class="line"></span><br><span class="line">* 文本：</span><br></pre></td></tr></tbody></table></figure>
+journey<br>  title 用户旅程图<br>  section 用户注册<br>  注册页面: 显示注册表单<br>  用户填写: 输入信息<br>  提交: 提交表单<br>  section 用户登录<br>  登录页面: 显示登录表单<br>  用户验证: 验证信息<br>  进入系统: 进入主界面<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 图表：</span><br><span class="line">&lt;pre class="mermaid"&gt;journey</span><br><span class="line">    title 用户旅程图</span><br><span class="line">    section 用户注册</span><br><span class="line">    注册页面: 显示注册表单</span><br><span class="line">    用户填写: 输入信息</span><br><span class="line">    提交: 提交表单</span><br><span class="line">    section 用户登录</span><br><span class="line">    登录页面: 显示登录表单</span><br><span class="line">    用户验证: 验证信息</span><br><span class="line">    进入系统: 进入主界面&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&gt;思维导图 (Mind Maps)</span><br><span class="line"></span><br><span class="line">&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;思维导图用于展示思维过程和概念的关联，它是头脑风暴和创意发想的得力助手：</span><br><span class="line"></span><br><span class="line">* 文本：</span><br></pre></td></tr></tbody></table></figure>
+graph LR<br>  A[思维导图] –&gt; B[中心思想]<br>  B –&gt; C[分支1]<br>  B –&gt; D[分支2]<br>  C –&gt; E[子分支1]<br>  C –&gt; F[子分支2]<br>  D –&gt; G[子分支3]<br>  D –&gt; H[子分支4]<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line"></span><br><span class="line">* 图表：</span><br><span class="line">&lt;pre class="mermaid"&gt;graph LR</span><br><span class="line">    A[思维导图] --&gt; B[中心思想]</span><br><span class="line">    B --&gt; C[分支1]</span><br><span class="line">    B --&gt; D[分支2]</span><br><span class="line">    C --&gt; E[子分支1]</span><br><span class="line">    C --&gt; F[子分支2]</span><br><span class="line">    D --&gt; G[子分支3]</span><br><span class="line">    D --&gt; H[子分支4]&lt;/pre&gt;</span><br><span class="line"></span><br><span class="line">&gt;饼图 (Pie Charts)</span><br><span class="line"></span><br><span class="line">&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;饼图用于展示数据的百分比分布，它在市场分析和用户调研中非常有用：</span><br><span class="line"></span><br><span class="line">* 文本：</span><br></pre></td></tr></tbody></table></figure>
+pie<br>  “水果” : 25<br>  “蔬菜” : 25<br>  “肉类” : 20<br>  “乳制品” : 15<br>  “其他” : 15</li>
+</ul>
+<pre><code>
+* 图表：
+&lt;pre class="mermaid"&gt;pie
+    "水果" : 25
+    "蔬菜" : 25
+    "肉类" : 20
+    "乳制品" : 15
+    "其他" : 15&lt;/pre&gt;
+</code></pre>
 ]]></content>
       <categories>
         <category>Hexo博客</category>
