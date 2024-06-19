@@ -1325,7 +1325,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff940d;
+    background: #ffbf70;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2997,7 +2997,7 @@ body {
 }
 /*相册主页面*/
 .photos-page {
-  margin-top: -50px;
+  margin-top: 50px;
 }
 .photos-list {
   display: flex;
