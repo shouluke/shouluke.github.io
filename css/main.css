@@ -1325,7 +1325,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #b969ff;
+    background: #0942e0;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3028,8 +3028,8 @@ body {
 }
 /*相册封面显示以及点击面积*/
 .photos-column a img {
-  height: 420px;
-  width: 600px;
+  height: 270px;
+  width: 380px;
   object-fit: cover;
 }
 .img-list {
@@ -3050,8 +3050,8 @@ body {
 }
 /*图片显示面积*/
 .img-column a img {
-  height: 320px;
-  width: 410px;
+  height: 270px;
+  width: 380px;
   object-fit: scale-down;
 }
 .post-button .btn {
