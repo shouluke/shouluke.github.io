@@ -75,67 +75,8 @@
     B -- 否 --&gt; D[结束];
     C --&gt; D;</pre>
 
-<blockquote>
-<p>标准横向流程图</p>
-</blockquote>
-<ul>
-<li>文本：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: 审批</span><br><span class="line">cond=&gt;condition: 年龄是否大于18</span><br><span class="line">sub1=&gt;subroutine: 返回审批</span><br><span class="line">io=&gt;inputoutput: 通过</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">st(right)-&gt;op(right)-&gt;cond</span><br><span class="line">cond(yes)-&gt;io(bottom)-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>图表：</li>
-</ul>
-<pre class="mermaid">st=&gt;start: 开始
-op=&gt;operation: 审批
-cond=&gt;condition: 年龄是否大于18
-sub1=&gt;subroutine: 返回审批
-io=&gt;inputoutput: 通过
-e=&gt;end: 结束
-st(right)-&gt;op(right)-&gt;cond
-cond(yes)-&gt;io(bottom)-&gt;e
-cond(no)-&gt;sub1(right)-&gt;op</pre>
-
-<blockquote>
-<p>标准竖向流程图</p>
-</blockquote>
-<ul>
-<li>文本：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 通过</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>图表：</li>
-</ul>
-<pre class="mermaid">st=&gt;start: 开始框
-op=&gt;operation: 处理框
-cond=&gt;condition: 判断框(是或否?)
-sub1=&gt;subroutine: 子流程
-io=&gt;inputoutput: 输入输出框
-e=&gt;end: 通过
-st-&gt;op-&gt;cond
-cond(yes)-&gt;io-&gt;e
-cond(no)-&gt;sub1(right)-&gt;op</pre>
-
 <hr>
 <h4 id="序列图-Sequence-Diagrams"><a href="#序列图-Sequence-Diagrams" class="headerlink" title="序列图 (Sequence Diagrams)"></a>序列图 (Sequence Diagrams)</h4><p>    序列图用于展示对象之间的交互，包括消息的发送和接收。它在系统设计和API文档中非常有用：</p>
-<ul>
-<li>文本：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">sequenceDiagram</span><br><span class="line">    participant Alice as A</span><br><span class="line">    participant Bob as B</span><br><span class="line">    A-&gt;&gt;B: 天王盖地虎</span><br><span class="line">    B--&gt;&gt;A: 宝塔镇河妖</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>图表：</li>
-</ul>
-<pre class="mermaid">sequenceDiagram
-    participant Alice as A
-    participant Bob as B
-    A-&gt;&gt;B: 天王盖地虎
-    B--&gt;&gt;A: 宝塔镇河妖</pre>
-
-<blockquote>
-<p>UML标准时序图：</p>
-</blockquote>
 <ul>
 <li>文本：</li>
 </ul>
@@ -156,29 +97,6 @@ cond(no)-&gt;sub1(right)-&gt;op</pre>
     李四--&gt;&gt;张三: 很好!
     王五-&gt;李四: 你怎么样?
     李四--&gt;王五: 很好!</pre>
-
-<blockquote>
-<p>UML复杂时序图：</p>
-</blockquote>
-<ul>
-<li>文本：</li>
-</ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Title: 标题：复杂使用</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象B-&gt;小三: 你好吗</span><br><span class="line">小三--&gt;&gt;对象A: 对象B找我了</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">Note over 小三,对象B: 我们是朋友</span><br><span class="line">participant C</span><br><span class="line">Note right of C: 没人陪我玩</span><br></pre></td></tr></tbody></table></figure>
-
-<ul>
-<li>图表：</li>
-</ul>
-<pre class="mermaid">Title: 标题：复杂使用
-对象A-&gt;对象B: 对象B你好吗?（请求）
-Note right of 对象B: 对象B的描述
-Note left of 对象A: 对象A的描述(提示)
-对象B--&gt;对象A: 我很好(响应)
-对象B-&gt;小三: 你好吗
-小三--&gt;&gt;对象A: 对象B找我了
-对象A-&gt;对象B: 你真的好吗？
-Note over 小三,对象B: 我们是朋友
-participant C
-Note right of C: 没人陪我玩</pre>
 
 <hr>
 <h4 id="甘特图-Gantt-Charts"><a href="#甘特图-Gantt-Charts" class="headerlink" title="甘特图 (Gantt Charts)"></a>甘特图 (Gantt Charts)</h4><p>    甘特图是项目管理中不可或缺的工具，它帮助项目管理者展示任务和时间线：</p>
