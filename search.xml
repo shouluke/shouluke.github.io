@@ -41,10 +41,26 @@
 <ol start="3">
 <li>在Markdown文档中插入一段Mermaid图表代码，下面是几个mermaid图表实例，很明显文字已经转换成了漂亮的图表。</li>
 </ol>
+<h4 id="流程图-Flowcharts"><a href="#流程图-Flowcharts" class="headerlink" title="流程图 (Flowcharts)"></a>流程图 (Flowcharts)</h4><p>    流程图是表示算法、工作流或过程步骤的优选方式。在Mermaid中，创建流程图就像编写Markdown一样简单：</p>
 <blockquote>
-<p>流程图 (Flowcharts)</p>
+<p>横向流程图</p>
 </blockquote>
-<p>    流程图是表示算法、工作流或过程步骤的优选方式。在Mermaid中，创建流程图就像编写Markdown一样简单：</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">graph LR;</span><br><span class="line">    A[开始] --&gt; B{决策点};</span><br><span class="line">    B -- 是 --&gt; C[执行任务];</span><br><span class="line">    B -- 否 --&gt; D[结束];</span><br><span class="line">    C --&gt; D;</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">graph LR;
+    A[开始] --&gt; B{决策点};
+    B -- 是 --&gt; C[执行任务];
+    B -- 否 --&gt; D[结束];
+    C --&gt; D;</pre>
+<blockquote>
+<p>竖向流程图</p>
+</blockquote>
 <ul>
 <li>文本：</li>
 </ul>
@@ -59,11 +75,34 @@
     B -- 否 --&gt; D[结束];
     C --&gt; D;</pre>
 
-<hr>
 <blockquote>
-<p>序列图 (Sequence Diagrams)</p>
+<p>标准横向流程图</p>
 </blockquote>
-<p>    序列图用于展示对象之间的交互，包括消息的发送和接收。它在系统设计和API文档中非常有用：</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: 审批</span><br><span class="line">cond=&gt;condition: 年龄是否大于18</span><br><span class="line">sub1=&gt;subroutine: 返回审批</span><br><span class="line">io=&gt;inputoutput: 通过</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">st(right)-&gt;op(right)-&gt;cond</span><br><span class="line">cond(yes)-&gt;io(bottom)-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: 审批</span><br><span class="line">cond=&gt;condition: 年龄是否大于18</span><br><span class="line">sub1=&gt;subroutine: 返回审批</span><br><span class="line">io=&gt;inputoutput: 通过</span><br><span class="line">e=&gt;end: 结束</span><br><span class="line">st(right)-&gt;op(right)-&gt;cond</span><br><span class="line">cond(yes)-&gt;io(bottom)-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></tbody></table></figure>
+
+<blockquote>
+<p>标准竖向流程图</p>
+</blockquote>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 通过</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 通过</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h4 id="序列图-Sequence-Diagrams"><a href="#序列图-Sequence-Diagrams" class="headerlink" title="序列图 (Sequence Diagrams)"></a>序列图 (Sequence Diagrams)</h4><p>    序列图用于展示对象之间的交互，包括消息的发送和接收。它在系统设计和API文档中非常有用：</p>
 <ul>
 <li>文本：</li>
 </ul>
@@ -78,58 +117,98 @@
     A-&gt;&gt;B: 天王盖地虎
     B--&gt;&gt;A: 宝塔镇河妖</pre>
 
-<hr>
 <blockquote>
-<p>甘特图 (Gantt Charts)</p>
+<p>UML标准时序图：</p>
 </blockquote>
-<p>    甘特图是项目管理中不可或缺的工具，它帮助项目管理者展示任务和时间线：</p>
 <ul>
 <li>文本：</li>
 </ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">gantt</span><br><span class="line">    title 项目开发时间线</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    section 设计</span><br><span class="line">    设计阶段 :done,    des1, 2023-01-06,2023-01-08</span><br><span class="line">    section 开发</span><br><span class="line">    开发阶段 :active,  dev1, after des1, 5d</span><br><span class="line">    section 测试</span><br><span class="line">    测试阶段 :         test1, after dev1, 3d</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头</span><br><span class="line">  sequenceDiagram</span><br><span class="line">    participant 张三</span><br><span class="line">    participant 李四</span><br><span class="line">    张三-&gt;王五: 王五你好吗？</span><br><span class="line">    loop 健康检查</span><br><span class="line">        王五-&gt;王五: 与疾病战斗</span><br><span class="line">    end</span><br><span class="line">    Note right of 王五: 合理 食物 &lt;br/&gt;看医生...</span><br><span class="line">    李四--&gt;&gt;张三: 很好!</span><br><span class="line">    王五-&gt;李四: 你怎么样?</span><br><span class="line">    李四--&gt;王五: 很好!</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li>图表：</li>
 </ul>
-<pre class="mermaid">gantt
-    title 项目开发时间线
-    dateFormat  YYYY-MM-DD
-    section 设计
-    设计阶段 :done,    des1, 2023-01-06,2023-01-08
-    section 开发
-    开发阶段 :active,  dev1, after des1, 5d
-    section 测试
-    测试阶段 :         test1, after dev1, 3d</pre>
+<pre class="mermaid">%% 时序图例子,-&gt; 直线，--&gt;虚线，-&gt;&gt;实线箭头
+  sequenceDiagram
+    participant 张三
+    participant 李四
+    张三-&gt;王五: 王五你好吗？
+    loop 健康检查
+        王五-&gt;王五: 与疾病战斗
+    end
+    Note right of 王五: 合理 食物 <br>看医生...
+    李四--&gt;&gt;张三: 很好!
+    王五-&gt;李四: 你怎么样?
+    李四--&gt;王五: 很好!</pre>
 
-<hr>
 <blockquote>
-<p>类图 (Class Diagrams)</p>
+<p>UML复杂时序图：</p>
 </blockquote>
-<p>    类图在面向对象编程中用于展示类之间的关系，它帮助开发者理解系统的结构：</p>
 <ul>
 <li>文本：</li>
 </ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">    class Animal {</span><br><span class="line">        - name : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    class Dog {</span><br><span class="line">        - breed : string</span><br><span class="line">        + speak() : string</span><br><span class="line">    }</span><br><span class="line">    Animal &lt;|-- Dog</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Title: 标题：复杂使用</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象B-&gt;小三: 你好吗</span><br><span class="line">小三--&gt;&gt;对象A: 对象B找我了</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">Note over 小三,对象B: 我们是朋友</span><br><span class="line">participant C</span><br><span class="line">Note right of C: 没人陪我玩</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">Title: 标题：复杂使用</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象B-&gt;小三: 你好吗</span><br><span class="line">小三--&gt;&gt;对象A: 对象B找我了</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">Note over 小三,对象B: 我们是朋友</span><br><span class="line">participant C</span><br><span class="line">Note right of C: 没人陪我玩</span><br></pre></td></tr></tbody></table></figure>
+
+<hr>
+<h4 id="甘特图-Gantt-Charts"><a href="#甘特图-Gantt-Charts" class="headerlink" title="甘特图 (Gantt Charts)"></a>甘特图 (Gantt Charts)</h4><p>    甘特图是项目管理中不可或缺的工具，它帮助项目管理者展示任务和时间线：</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">%% 语法示例</span><br><span class="line">    gantt</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    title 软件开发甘特图</span><br><span class="line">    section 设计</span><br><span class="line">    需求                      :done,    des1, 2022-01-06,2014-01-08</span><br><span class="line">    原型                      :active,  des2, 2022-01-09, 3d</span><br><span class="line">    UI设计                     :         des3, after des2, 5d</span><br><span class="line">未来任务                     :         des4, after des3, 5d</span><br><span class="line">    section 开发</span><br><span class="line">    学习准备理解需求                      :crit, done, 2022-01-06,24h</span><br><span class="line">    设计框架                             :crit, done, after des2, 2d</span><br><span class="line">    开发                                 :crit, active, 3d</span><br><span class="line">    未来任务                              :crit, 5d</span><br><span class="line">    耍                                   :2d</span><br><span class="line">    section 测试</span><br><span class="line">    功能测试                              :active, a1, after des3, 3d</span><br><span class="line">    压力测试                               :after a1  , 20h</span><br><span class="line">    测试报告                               : 48h</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">    %% 语法示例
+        gantt
+        dateFormat  YYYY-MM-DD
+        title 软件开发甘特图
+        section 设计
+        需求                      :done,    des1, 2022-01-06,2014-01-08
+        原型                      :active,  des2, 2022-01-09, 3d
+        UI设计                     :         des3, after des2, 5d
+    未来任务                     :         des4, after des3, 5d
+        section 开发
+        学习准备理解需求                      :crit, done, 2022-01-06,24h
+        设计框架                             :crit, done, after des2, 2d
+        开发                                 :crit, active, 3d
+        未来任务                              :crit, 5d
+        耍                                   :2d
+        section 测试
+        功能测试                              :active, a1, after des3, 3d
+        压力测试                               :after a1  , 20h
+        测试报告                               : 48h</pre>
+
+<hr>
+<h4 id="类图-Class-Diagrams"><a href="#类图-Class-Diagrams" class="headerlink" title="类图 (Class Diagrams)"></a>类图 (Class Diagrams)</h4><p>    类图在面向对象编程中用于展示类之间的关系，它帮助开发者理解系统的结构：</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">classDiagram</span><br><span class="line">        class Account</span><br><span class="line">        Account : +String owner</span><br><span class="line">    Account &lt;|-- BankAccount</span><br><span class="line">        class BankAccount</span><br><span class="line">    BankAccount : +String owner</span><br><span class="line">    BankAccount : +Bigdecimal balance</span><br><span class="line">    BankAccount : +deposit(amount)</span><br><span class="line">    BankAccount : +withdrawl(amount)</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li>图表：</li>
 </ul>
 <pre class="mermaid">classDiagram
-    class Animal {
-        - name : string
-        + speak() : string
-    }
-    class Dog {
-        - breed : string
-        + speak() : string
-    }
-    Animal &lt;|-- Dog</pre>
+        class Account
+        账户 : +一系列所有者
+    账户 &lt;|-- 银行账户
+        class BankAccount
+    银行账户 : +字符串所有者
+    银行账户 : +大小数余额
+    银行账户 : +保证金（金额）
+    银行账户 : +提取（金额）</pre>
 
 <hr>
+<h4 id="状态图-State-Diagrams"><a href="#状态图-State-Diagrams" class="headerlink" title="状态图 (State Diagrams)"></a>状态图 (State Diagrams)</h4><p>    状态图展示了对象的状态以及状态之间的转换，它在表示系统状态转换时非常有用：</p>
 <blockquote>
-<p>状态图 (State Diagrams)</p>
+<p>示例1</p>
 </blockquote>
-<p>    状态图展示了对象的状态以及状态之间的转换，它在表示系统状态转换时非常有用：</p>
 <ul>
 <li>文本：</li>
 </ul>
@@ -139,18 +218,33 @@
 <li>图表：</li>
 </ul>
 <pre class="mermaid">stateDiagram-v2
-    [*] --&gt; Still
-    Still --&gt; [*]
-    Still --&gt; Moving
-    Moving --&gt; Still
-    Moving --&gt; Crash
-    Crash --&gt; [*]</pre>
+    [*] --&gt; 虽然
+    虽然 --&gt; [*]
+    虽然 --&gt; 进展
+    进展 --&gt; 虽然
+    进展 --&gt; 失败
+    失败 --&gt; [*]</pre>
+
+<blockquote>
+<p>示例2</p>
+</blockquote>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">stateDiagram-v2</span><br><span class="line">    [*] --&gt; 第一</span><br><span class="line">    state First {</span><br><span class="line">        [*] --&gt; 第二</span><br><span class="line">        second --&gt; [*]</span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<pre class="mermaid">stateDiagram-v2
+    [*] --&gt; 第一
+    state First {
+        [*] --&gt; 第二
+        second --&gt; [*]
+    }</pre>
 
 <hr>
-<blockquote>
-<p>实体关系图 (Entity-Relationship Diagrams)</p>
-</blockquote>
-<p>    实体关系图用于数据建模，展示实体之间的关系，是数据库设计的基础：</p>
+<h4 id="实体关系图-Entity-Relationship-Diagrams"><a href="#实体关系图-Entity-Relationship-Diagrams" class="headerlink" title="实体关系图 (Entity-Relationship Diagrams)"></a>实体关系图 (Entity-Relationship Diagrams)</h4><p>    实体关系图用于数据建模，展示实体之间的关系，是数据库设计的基础：</p>
 <ul>
 <li>文本：</li>
 </ul>
@@ -160,15 +254,12 @@
 <li>图表：</li>
 </ul>
 <pre class="mermaid">erDiagram
-    CUSTOMER ||--o{ ORDER : places
-    ORDER ||--|{ LINE-ITEM : contains
-    CUSTOMER }|--|| PRODUCT : orders</pre>
+    客户 ||--o{ 订单 : 地点
+    订单 ||--|{ 单项的 : 包含
+    客户 }|--|| 产品 : 订单</pre>
 
 <hr>
-<blockquote>
-<p>用户旅程图 (User Journey Diagrams)</p>
-</blockquote>
-<p>    用户旅程图展示了用户与系统的交互流程，它在用户体验设计和产品管理中扮演着重要角色：</p>
+<h4 id="用户旅程图-User-Journey-Diagrams"><a href="#用户旅程图-User-Journey-Diagrams" class="headerlink" title="用户旅程图 (User Journey Diagrams)"></a>用户旅程图 (User Journey Diagrams)</h4><p>    用户旅程图展示了用户与系统的交互流程，它在用户体验设计和产品管理中扮演着重要角色：</p>
 <ul>
 <li>文本：</li>
 </ul>
@@ -189,10 +280,7 @@
     进入系统: 进入主界面</pre>
 
 <hr>
-<blockquote>
-<p>思维导图 (Mind Maps)</p>
-</blockquote>
-<p>    思维导图用于展示思维过程和概念的关联，它是头脑风暴和创意发想的得力助手：</p>
+<h4 id="思维导图-Mind-Maps"><a href="#思维导图-Mind-Maps" class="headerlink" title="思维导图 (Mind Maps)"></a>思维导图 (Mind Maps)</h4><p>    思维导图用于展示思维过程和概念的关联，它是头脑风暴和创意发想的得力助手：</p>
 <ul>
 <li>文本：</li>
 </ul>
@@ -211,25 +299,31 @@
     D --&gt; H[子分支4]</pre>
 
 <hr>
-<blockquote>
-<p>饼图 (Pie Charts)</p>
-</blockquote>
-<p>    饼图用于展示数据的百分比分布，它在市场分析和用户调研中非常有用：</p>
+<h4 id="饼图-Pie-Charts"><a href="#饼图-Pie-Charts" class="headerlink" title="饼图 (Pie Charts)"></a>饼图 (Pie Charts)</h4><p>    饼图用于展示数据的百分比分布，它在市场分析和用户调研中非常有用：</p>
 <ul>
 <li>文本：</li>
 </ul>
-<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">pie</span><br><span class="line">  title Key elements in Product X</span><br><span class="line">  "水果" : 25</span><br><span class="line">  "蔬菜" : 25</span><br><span class="line">  "肉类" : 20</span><br><span class="line">  "乳制品" : 15</span><br><span class="line">  "其他" :  15</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">pie</span><br><span class="line">"苹果" : 386</span><br><span class="line">"香蕉" : 85</span><br><span class="line">"菠萝" : 15</span><br></pre></td></tr></tbody></table></figure>
 
 <ul>
 <li>图表：</li>
 </ul>
 <pre class="mermaid">pie
-  title Key elements in Product X
-  "水果" : 25
-  "蔬菜" : 25
-  "肉类" : 20
-  "乳制品" : 15
-  "其他" :  15</pre>]]></content>
+"苹果" : 386
+"香蕉" : 85
+"菠萝" : 15</pre>
+
+<hr>
+<h4 id="Goat-Ascii图"><a href="#Goat-Ascii图" class="headerlink" title="Goat Ascii图"></a>Goat Ascii图</h4><p>    Goat可以将ASCII渲染成SVG</p>
+<ul>
+<li>文本：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">+-------------------+                           ^                      .---.</span><br><span class="line">|    A Box          |__.--.__    __.--&gt;         |      .-.             |   |</span><br><span class="line">|                   |        '--'               v     | * |&lt;---        |   |</span><br><span class="line">+-------------------+                                  '-'             |   |</span><br><span class="line">                       Round                                       *---(-. |</span><br><span class="line">  .-----------------.  .-------.    .----------.         .-------.     | | |</span><br><span class="line"> |   Mixed Rounded  | |         |  / Diagonals  \        |   |   |     | | |</span><br><span class="line"> | &amp; Square Corners |  '--. .--'  /              \       |---+---|     '-)-'       .--------.</span><br><span class="line"> '--+------------+-'  .--. |     '-------+--------'      |   |   |       |        / Search /</span><br><span class="line">    |            |   |    | '---.        |               '-------'       |       '-+------'</span><br><span class="line">    |&lt;----------&gt;|   |    |      |       v                Interior                 |     ^</span><br><span class="line">    '           &lt;---'      '----'   .-----------.              ---.     .---       v     |</span><br><span class="line"> .------------------.  Diag line    | .-------. +---.              \   /           .     |</span><br><span class="line"> |   if (a &gt; b)     +---.      .---&gt;| |       | |    | Curved line  \ /           / \    |</span><br><span class="line"> |   obj-&gt;fcn()     |    \    /     | '-------' |&lt;--'                +           /   \   |</span><br><span class="line"> '------------------'     '--'      '--+--------'      .--. .--.     |  .-.     +Done?+-'</span><br><span class="line">    .---+-----.                        |   ^           |\ | | /|  .--+ |   |     \   /</span><br><span class="line">    |   |     | Join        \|/        |   | Curved    | \| |/ | |    \    |      \ /</span><br><span class="line">    |   |     +----&gt;  o    --o--        '-'  Vertical  '--' '--'  '--  '--'        +  .---.</span><br><span class="line"> &lt;--+---+-----'       |     /|\                                                    |  | 3 |</span><br><span class="line">                      v                             not:line    'quotes'        .-'   '---'</span><br><span class="line">  .-.             .---+--------.            /            A || B   *bold*       |        ^</span><br><span class="line"> |   |           |   Not a dot  |      &lt;---+---&lt;--    A dash--is not a line    v        |</span><br><span class="line">  '-'             '---------+--'          /           Nor/is this.            ---</span><br></pre></td></tr></tbody></table></figure>
+
+<ul>
+<li>图表：</li>
+</ul>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">+-------------------+                           ^                      .---.</span><br><span class="line">|    A Box          |__.--.__    __.--&gt;         |      .-.             |   |</span><br><span class="line">|                   |        '--'               v     | * |&lt;---        |   |</span><br><span class="line">+-------------------+                                  '-'             |   |</span><br><span class="line">                       Round                                       *---(-. |</span><br><span class="line">  .-----------------.  .-------.    .----------.         .-------.     | | |</span><br><span class="line"> |   Mixed Rounded  | |         |  / Diagonals  \        |   |   |     | | |</span><br><span class="line"> | &amp; Square Corners |  '--. .--'  /              \       |---+---|     '-)-'       .--------.</span><br><span class="line"> '--+------------+-'  .--. |     '-------+--------'      |   |   |       |        / Search /</span><br><span class="line">    |            |   |    | '---.        |               '-------'       |       '-+------'</span><br><span class="line">    |&lt;----------&gt;|   |    |      |       v                Interior                 |     ^</span><br><span class="line">    '           &lt;---'      '----'   .-----------.              ---.     .---       v     |</span><br><span class="line"> .------------------.  Diag line    | .-------. +---.              \   /           .     |</span><br><span class="line"> |   if (a &gt; b)     +---.      .---&gt;| |       | |    | Curved line  \ /           / \    |</span><br><span class="line"> |   obj-&gt;fcn()     |    \    /     | '-------' |&lt;--'                +           /   \   |</span><br><span class="line"> '------------------'     '--'      '--+--------'      .--. .--.     |  .-.     +Done?+-'</span><br><span class="line">    .---+-----.                        |   ^           |\ | | /|  .--+ |   |     \   /</span><br><span class="line">    |   |     | Join        \|/        |   | Curved    | \| |/ | |    \    |      \ /</span><br><span class="line">    |   |     +----&gt;  o    --o--        '-'  Vertical  '--' '--'  '--  '--'        +  .---.</span><br><span class="line"> &lt;--+---+-----'       |     /|\                                                    |  | 3 |</span><br><span class="line">                      v                             not:line    'quotes'        .-'   '---'</span><br><span class="line">  .-.             .---+--------.            /            A || B   *bold*       |        ^</span><br><span class="line"> |   |           |   Not a dot  |      &lt;---+---&lt;--    A dash--is not a line    v        |</span><br><span class="line">  '-'             '---------+--'          /           Nor/is this.            ---</span><br></pre></td></tr></tbody></table></figure>]]></content>
       <categories>
         <category>Hexo博客</category>
         <category>NexT主题</category>
