@@ -3,7 +3,7 @@
   <entry>
     <title>NexT主题添加友情链接</title>
     <url>/posts/6cd5a8a6.html</url>
-    <content><![CDATA[<p>    本教程基于最新版Hexo7.2.0和NexT8.20.0主题，根据自身审美标准对links.njk文件进行了二次修改。文末附带未修改的源码，可根据自身审美标准进行修改。</p>
+    <content><![CDATA[<p>    本教程基于最新版Hexo7.2.0和NexT8.20.0主题，根据自身审美标准对links.njk文件进行了二次修改。文末附带未修改的源码，可根据自身审美标准进行修改。<span id="more"></span></p>
 <h3 id="添加方法"><a href="#添加方法" class="headerlink" title="添加方法"></a>添加方法</h3><p>    1、打开博客目录下_config.next.yml文件，然后在该文件的menu<sub>（菜单）</sub>下面创建一个link项目：<br>    路径：blog/_config.next.yml</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  link: /links/ || fa fa-link</span><br></pre></td></tr></tbody></table></figure>
 
