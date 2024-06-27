@@ -3,7 +3,7 @@
   <entry>
     <title>NexT主题添加网站导航书签（方案二）</title>
     <url>/posts/11c723db.html</url>
-    <content><![CDATA[<p>    此方案网站导航书签有别于方案一或其它，但界面更精致美观，且还能直接添加到博客文章中。书签中的内容可随意添加修改，书签样式大小、颜色也可以自定义修改。此方案菜单名称用的是bookmark，你也可以与方案一一样用navigate名称。<span id="more"></span></p>
+    <content><![CDATA[<p>    此方案网站导航书签有别于方案一或其它，但界面更精致美观，且还能直接添加到博客文章中。书签中的内容可随意添加修改，书签样式大小、颜色也可以自定义修改。<span id="more"></span>此方案菜单名称用的是bookmark，你也可以与方案一一样用navigate名称。</p>
 <h3 id="添加方法"><a href="#添加方法" class="headerlink" title="添加方法"></a>添加方法</h3><p>    1、打开博客目录下_config.next.yml文件，然后在该文件的menu<sub>（菜单）</sub>下面创建一个bookmark项目：<br>    路径：blog/_config.next.yml</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  bookmark: /bookmark/ || fa fa-bookmark</span><br></pre></td></tr></tbody></table></figure>
 
@@ -27,7 +27,7 @@
   <entry>
     <title>NexT主题添加网站导航书签（方案一）</title>
     <url>/posts/21d1cf03.html</url>
-    <content><![CDATA[<p>    此网站导航书签，风格类似于一个简易的网站版面，且精致美观。你可以在navigate文件夹的index.html里面添加自己常访问的站点链接，也可以删除里面现有的站点链接，使用前记得在index.html文件里更改自己的网站地址，否则在导航页面无法返回自己主页。<span id="more"></span></p>
+    <content><![CDATA[<p>    此网站导航书签，风格类似于一个简易的网站版面，且精致美观。你可以在navigate文件夹的index.html里面添加自己常访问的站点链接，也可以删除里面现有的站点链接。<span id="more"></span>注意：使用前记得在index.html文件里更改自己的网站地址，否则在导航页面无法返回自己主页。</p>
 <h3 id="添加方法"><a href="#添加方法" class="headerlink" title="添加方法"></a>添加方法</h3><p>    1、打开博客目录下_config.next.yml文件，然后在该文件的menu<sub>（菜单）</sub>下面创建一个navigate项目：<br>    路径：blog/_config.next.yml</p>
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  navigate: /navigate/ || fas fa-compass</span><br></pre></td></tr></tbody></table></figure>
 
@@ -36,7 +36,9 @@
 <figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  navigate: 导航</span><br></pre></td></tr></tbody></table></figure>
 
 <hr>
-<p>    3、打开博客的_config.yml文件，在skip_render后面添加navigate/*：<br>    路径：blog/_config.yml</p>
+<p>    3、打开博客的_config.yml文件，在skip_render后面添加navigate/*<br>    路径：blog/_config.yml</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="code"><pre><span class="line">skip_render: navigate/*</span><br></pre></td></tr></tbody></table></figure>
+
 <hr>
 <p>    4、在Open Git Bash here界面输入hexo new page navigate，回车。此时在blog的source文件夹里生成对应的navigate文件夹及index.md文件，删掉里面的index.md文件，然后在navigate文件夹里新建css、js文件夹和一个index.html文件。你也可以什么都不建，直接下载源码进行解压，然后将压缩包里所有文件移到博客的source文件夹里即可。<br>    路径：blog/source/navigate</p>
 <div class="note success"><p>navigate源码下载地址： <a class="btn" href="https://www.123pan.com/s/APfKVv-O5F5H.html"><i class="fa fa-download fa-lg fa-fw"></i>navigate源码</a></p>
