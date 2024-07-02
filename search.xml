@@ -1,6 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试</title>
+    <url>/posts/9daba997.html</url>
+    <content><![CDATA[<div id="echarts7203" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
+<script type="text/javascript">
+	// 基于准备好的dom，初始化echarts实例
+	var myChart = echarts.init(document.getElementById('echarts7203'));
+	// 指定图表的配置项和数据
+	option = {
+#   title: {
+#      text: 'Stacked Line'
+#   },
+  tooltip: {
+    trigger: 'axis'
+  },
+  legend: {
+    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+  },
+  grid: {
+    left: '3%',
+    right: '4%',
+    bottom: '3%',
+    containLabel: true
+  },
+  toolbox: {
+    feature: {
+      saveAsImage: {}
+    }
+  },
+  xAxis: {
+    type: 'category',
+    boundaryGap: false,
+    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    {
+      name: 'Email',
+      type: 'line',
+      stack: 'Total',
+      data: [120, 132, 101, 134, 90, 230, 210]
+    },
+    {
+      name: 'Union Ads',
+      type: 'line',
+      stack: 'Total',
+      data: [220, 182, 191, 234, 290, 330, 310]
+    },
+    {
+      name: 'Video Ads',
+      type: 'line',
+      stack: 'Total',
+      data: [150, 232, 201, 154, 190, 330, 410]
+    },
+    {
+      name: 'Direct',
+      type: 'line',
+      stack: 'Total',
+      data: [320, 332, 301, 334, 390, 330, 320]
+    },
+    {
+      name: 'Search Engine',
+      type: 'line',
+      stack: 'Total',
+      data: [820, 932, 901, 934, 1290, 1330, 1320]
+    }
+  ]
+};
+	// 使用刚指定的配置项和数据显示图表。
+	myChart.setOption(option);
+</script>]]></content>
+  </entry>
+  <entry>
     <title>NexT主题添加主页轮播图</title>
     <url>/posts/eb656e6e.html</url>
     <content><![CDATA[<p>    NexT主题在主页是没有轮播图之类的，如果想要实现轮播图效果，只需要添加相关代码文件即可。<span id="more"></span>轮播图呈现效果有两种，一种是宽屏模式<sub>（单一图片）</sub>，一种是窄屛模式<sub>（图片+其它元素）</sub>，通过修改_macro文件夹的carousel.njk文件代码实现不同效果。本文附带两种效果代码，根据自身喜好，任选其中一种即可。</p>
