@@ -3,71 +3,213 @@
   <entry>
     <title>测试</title>
     <url>/posts/9daba997.html</url>
-    <content><![CDATA[<div id="echarts6985" style="width: 85%;height: 400px;margin: 0 auto"></div>
-<script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
+    <content><![CDATA[<div id="echarts2081" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts6985'));
+	var myChart = echarts.init(document.getElementById('echarts2081'));
 	// 指定图表的配置项和数据
 	option = {
-#   title: {
-#      text: 'Stacked Line'
-#   },
+  title: {
+    text: 'Proportion of Browsers',
+    subtext: 'Fake Data',
+    top: 10,
+    left: 10
+  },
   tooltip: {
-    trigger: 'axis'
+    trigger: 'item'
   },
   legend: {
-    data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+    type: 'scroll',
+    bottom: 10,
+    data: (function () {
+      var list = [];
+      for (var i = 1; i <= 28; i++) {
+        list.push(i + 2000 + '');
+      }
+      return list;
+    })()
   },
-  grid: {
-    left: '3%',
-    right: '4%',
-    bottom: '3%',
-    containLabel: true
+  visualMap: {
+    top: 'middle',
+    right: 10,
+    color: ['red', 'yellow'],
+    calculable: true
   },
-  toolbox: {
-    feature: {
-      saveAsImage: {}
+  radar: {
+    indicator: [
+      { text: 'IE8-', max: 400 },
+      { text: 'IE9+', max: 400 },
+      { text: 'Safari', max: 400 },
+      { text: 'Firefox', max: 400 },
+      { text: 'Chrome', max: 400 }
+    ]
+  },
+  series: (function () {
+    var series = [];
+    for (var i = 1; i <= 28; i++) {
+      series.push({
+        type: 'radar',
+        symbol: 'none',
+        lineStyle: {
+          width: 1
+        },
+        emphasis: {
+          areaStyle: {
+            color: 'rgba(0,250,0,0.3)'
+          }
+        },
+        data: [
+          {
+            value: [
+              (40 - i) * 10,
+              (38 - i) * 4 + 60,
+              i * 5 + 10,
+              i * 9,
+              (i * i) / 2
+            ],
+            name: i + 2000 + ''
+          }
+        ]
+      });
     }
+    return series;
+  })()
+};
+	// 使用刚指定的配置项和数据显示图表。
+	myChart.setOption(option);
+</script>
+
+<div id="echarts835" style="width: 85%;height: 400px;margin: 0 auto"></div>
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js"></script>
+<script type="text/javascript">
+	// 基于准备好的dom，初始化echarts实例
+	var myChart = echarts.init(document.getElementById('echarts835'));
+	// 指定图表的配置项和数据
+	const weatherIcons = {
+  Sunny: ROOT_PATH + '/data/asset/img/weather/sunny_128.png',
+  Cloudy: ROOT_PATH + '/data/asset/img/weather/cloudy_128.png',
+  Showers: ROOT_PATH + '/data/asset/img/weather/showers_128.png'
+};
+option = {
+  title: {
+    text: 'Weather Statistics',
+    subtext: 'Fake Data',
+    left: 'center'
   },
-  xAxis: {
-    type: 'category',
-    boundaryGap: false,
-    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+  tooltip: {
+    trigger: 'item',
+    formatter: '{a} <br/>{b} : {c} ({d}%)'
   },
-  yAxis: {
-    type: 'value'
+  legend: {
+    bottom: 10,
+    left: 'center',
+    data: ['CityA', 'CityB', 'CityD', 'CityC', 'CityE']
   },
   series: [
     {
-      name: 'Email',
-      type: 'line',
-      stack: 'Total',
-      data: [120, 132, 101, 134, 90, 230, 210]
-    },
-    {
-      name: 'Union Ads',
-      type: 'line',
-      stack: 'Total',
-      data: [220, 182, 191, 234, 290, 330, 310]
-    },
-    {
-      name: 'Video Ads',
-      type: 'line',
-      stack: 'Total',
-      data: [150, 232, 201, 154, 190, 330, 410]
-    },
-    {
-      name: 'Direct',
-      type: 'line',
-      stack: 'Total',
-      data: [320, 332, 301, 334, 390, 330, 320]
-    },
-    {
-      name: 'Search Engine',
-      type: 'line',
-      stack: 'Total',
-      data: [820, 932, 901, 934, 1290, 1330, 1320]
+      type: 'pie',
+      radius: '65%',
+      center: ['50%', '50%'],
+      selectedMode: 'single',
+      data: [
+        {
+          value: 1548,
+          name: 'CityE',
+          label: {
+            formatter: [
+              '{title|{b}}{abg|}',
+              '  {weatherHead|Weather}{valueHead|Days}{rateHead|Percent}',
+              '{hr|}',
+              '  {Sunny|}{value|202}{rate|55.3%}',
+              '  {Cloudy|}{value|142}{rate|38.9%}',
+              '  {Showers|}{value|21}{rate|5.8%}'
+            ].join('\n'),
+            backgroundColor: '#eee',
+            borderColor: '#777',
+            borderWidth: 1,
+            borderRadius: 4,
+            rich: {
+              title: {
+                color: '#eee',
+                align: 'center'
+              },
+              abg: {
+                backgroundColor: '#333',
+                width: '100%',
+                align: 'right',
+                height: 25,
+                borderRadius: [4, 4, 0, 0]
+              },
+              Sunny: {
+                height: 30,
+                align: 'left',
+                backgroundColor: {
+                  image: weatherIcons.Sunny
+                }
+              },
+              Cloudy: {
+                height: 30,
+                align: 'left',
+                backgroundColor: {
+                  image: weatherIcons.Cloudy
+                }
+              },
+              Showers: {
+                height: 30,
+                align: 'left',
+                backgroundColor: {
+                  image: weatherIcons.Showers
+                }
+              },
+              weatherHead: {
+                color: '#333',
+                height: 24,
+                align: 'left'
+              },
+              hr: {
+                borderColor: '#777',
+                width: '100%',
+                borderWidth: 0.5,
+                height: 0
+              },
+              value: {
+                width: 20,
+                padding: [0, 20, 0, 30],
+                align: 'left'
+              },
+              valueHead: {
+                color: '#333',
+                width: 20,
+                padding: [0, 20, 0, 30],
+                align: 'center'
+              },
+              rate: {
+                width: 40,
+                align: 'right',
+                padding: [0, 10, 0, 0]
+              },
+              rateHead: {
+                color: '#333',
+                width: 40,
+                align: 'center',
+                padding: [0, 10, 0, 0]
+              }
+            }
+          }
+        },
+        { value: 735, name: 'CityC' },
+        { value: 510, name: 'CityD' },
+        { value: 434, name: 'CityB' },
+        { value: 335, name: 'CityA' }
+      ],
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
     }
   ]
 };
