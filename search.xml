@@ -3,11 +3,11 @@
   <entry>
     <title>测试</title>
     <url>/posts/9daba997.html</url>
-    <content><![CDATA[<div id="echarts4836" style="width: 85%;height: 400px;margin: 0 auto"></div>
+    <content><![CDATA[<div id="echarts5678" style="width: 85%;height: 400px;margin: 0 auto"></div>
 <script src="https://cdn.bootcss.com/echarts/4.3.0/echarts.common.min.js"></script>
 <script type="text/javascript">
 	// 基于准备好的dom，初始化echarts实例
-	var myChart = echarts.init(document.getElementById('echarts4836'));
+	var myChart = echarts.init(document.getElementById('echarts5678'));
 	// 指定图表的配置项和数据
 	option = {
 #   title: {
