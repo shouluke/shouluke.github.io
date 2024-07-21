@@ -2544,7 +2544,7 @@ header.header {
 .main-inner {
   border-radius: initial;
   box-sizing: border-box;
-  width: 80%;
+  width: 79%;
 }
 @media (max-width: 991px) {
   .main-inner {
