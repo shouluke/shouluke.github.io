@@ -1620,12 +1620,12 @@ pre code {
 }
 @media (min-width: 1200px) {
   .footer-inner {
-    width: 88em;
+    width: 77em;
   }
 }
 @media (min-width: 1600px) {
   .footer-inner {
-    width: 73%;
+    width: 99%;
   }
 }
 .use-motion .footer {
@@ -2527,12 +2527,12 @@ header.header {
 }
 @media (min-width: 1200px) {
   .main {
-    width: 88em;
+    width: 77em;
   }
 }
 @media (min-width: 1600px) {
   .main {
-    width: 73%;
+    width: 99%;
   }
 }
 @media (max-width: 991px) {
@@ -2544,7 +2544,7 @@ header.header {
 .main-inner {
   border-radius: 20px 20px 20px 20px;
   box-sizing: border-box;
-  width: 81%;
+  width: 83%;
 }
 @media (max-width: 991px) {
   .main-inner {
