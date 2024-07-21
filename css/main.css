@@ -2544,7 +2544,7 @@ header.header {
 .main-inner {
   border-radius: 20px 20px 20px 20px;
   box-sizing: border-box;
-  width: 81%;
+  width: 80%;
 }
 @media (max-width: 991px) {
   .main-inner {
@@ -2840,11 +2840,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
-}
-/* 隐藏顶部进度条 */
-.headband {
-  height: 0px;
-  background: #fc6423;
 }
 /* 站点标题背景 */
 .site-brand-container {
