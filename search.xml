@@ -1,68 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>calculator</title>
-    <url>/posts/247990c2.html</url>
-    <content><![CDATA[
-    <div class="calculator">
-        <input type="text" id="result" readonly="">
-        <div class="buttons">
-            <button class="clear">C</button>
-            <button class="operator">/</button>
-            <button class="operator">*</button>
-            <button class="operator">-</button>
-            <button class="number">7</button>
-            <button class="number">8</button>
-            <button class="number">9</button>
-            <button class="operator">+</button>
-            <button class="number">4</button>
-            <button class="number">5</button>
-            <button class="number">6</button>
-            <button class="equals">=</button>
-            <button class="number">1</button>
-            <button class="number">2</button>
-            <button class="number">3</button>
-            <button class="number">0</button>
-            <button class="decimal">.</button>
-        </div>
-    </div>
-    <script src="index.js"></script>
-
-
-
-<script>
-const buttonsEl = document.querySelectorAll("button");
-
-const inputFieldEl = document.getElementById("result");
-
-for (let i = 0; i < buttonsEl.length; i++) {
-  buttonsEl[i].addEventListener("click", () => {
-    const buttonValue = buttonsEl[i].textContent;
-    if (buttonValue === "C") {
-      clearResult();
-    } else if (buttonValue === "=") {
-      calculateResult();
-    } else {
-      appendValue(buttonValue);
-    }
-  });
-}
-
-function clearResult() {
-  inputFieldEl.value = "";
-}
-
-function calculateResult() {
-  inputFieldEl.value = eval(inputFieldEl.value);
-}
-
-function appendValue(buttonValue) {
-  inputFieldEl.value += buttonValue;
-  //   inputFieldEl.value = inputFieldEl.value + buttonValue;
-}
-</script>]]></content>
-  </entry>
-  <entry>
     <title>《宁乡双观黄氏五修族谱》中的“祭品”</title>
     <url>/posts/13651d3d.html</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="密码错误，请重新 ⌨ 输入正确密码" data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
