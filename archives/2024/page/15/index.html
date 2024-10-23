@@ -271,7 +271,7 @@
   			context.clearRect(0, 0, context.canvas.width, context.canvas.height);
   			drawDatetime(context);
   		}, 50)
-})();</script></ul><span id="timeDate">载入天数...</span><script>var now=new Date;function createtime(){var n=new Date("05/05/2024");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="🌏 本站已艰难运行了 "+dnum+" 天"}setInterval("createtime()",250)</script></div></div></aside></div><div class="main-inner archive posts-collapse"><div class="post-block"><div class="post-content"><div class="collection-title"><span class="collection-header">非常好! 目前共计 193 篇日志。 继续努力。</span><div id="posts-chart" data-start="2021-01" style="border-radius:8px;height:300px;padding:10px"></div>
+})();</script></ul><span id="timeDate">载入天数...</span><script>var now=new Date;function createtime(){var n=new Date("05/05/2024");now.setTime(now.getTime()+250),days=(now-n)/1e3/60/60/24,dnum=Math.floor(days),hours=(now-n)/1e3/60/60-24*dnum,hnum=Math.floor(hours),1==String(hnum).length&&(hnum="0"+hnum),minutes=(now-n)/1e3/60-1440*dnum-60*hnum,mnum=Math.floor(minutes),1==String(mnum).length&&(mnum="0"+mnum),seconds=(now-n)/1e3-86400*dnum-3600*hnum-60*mnum,snum=Math.round(seconds),1==String(snum).length&&(snum="0"+snum),document.getElementById("timeDate").innerHTML="🌏 本站已艰难运行了 "+dnum+" 天"}setInterval("createtime()",250)</script></div></div></aside></div><div class="main-inner archive posts-collapse"><div class="post-block"><div class="post-content"><div class="collection-title"><span class="collection-header">非常好! 目前共计 193 篇日志。 继续努力。</span><div id="posts-chart" data-start="2023-01" style="border-radius:8px;height:300px;padding:10px"></div>
   <script id="postsChart">
     var color = document.documentElement.getAttribute('data-theme') === 'light' ? '#4c4948' : 'rgba(255,255,255,0.7)'
     var postsChart = echarts.init(document.getElementById('posts-chart'), 'light');
@@ -306,7 +306,7 @@
             color: color
           }
         },
-        data: ["2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10","2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12","2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10"]
+        data: ["2023-01","2023-02","2023-03","2023-04","2023-05","2023-06","2023-07","2023-08","2023-09","2023-10","2023-11","2023-12","2024-01","2024-02","2024-03","2024-04","2024-05","2024-06","2024-07","2024-08","2024-09","2024-10"]
       },
       yAxis: {
         name: '文章篇数',
@@ -360,7 +360,7 @@
             color: 'rgba(1, 191, 236)'
           }])
         },
-        data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,126,46,20,1],
+        data: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,126,46,20,1],
         markLine: {
           data: [{
             name: '平均值',
