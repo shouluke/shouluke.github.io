@@ -34,7 +34,7 @@
 <meta property="og:image" content="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/38f6bb4568007827.png">
 <meta property="og:image" content="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/e6decd0a99949868.jpg">
 <meta property="article:published_time" content="2025-06-25T02:26:34.000Z">
-<meta property="article:modified_time" content="2025-06-26T10:05:10.373Z">
+<meta property="article:modified_time" content="2025-06-27T02:32:36.607Z">
 <meta property="article:author" content="收录客">
 <meta property="article:tag" content="博客搭建">
 <meta property="article:tag" content="主题配置">
@@ -711,7 +711,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/next-theme/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
 
 <p><strong>2、更换主题</strong></p>
-<p>（1）使用<code>质感文件</code>或者<code>MT管理器</code>打开博客文件夹。这里以<code>质感文件</code>为例<sub>（初次使用，需进行相关设置，才能访问到博客文件夹。设置方法：点击质感文件左上角“三横杠”，点击“添加存储”，选择“外部存储”；再点击左上角“三横杠”，选择“ZeroTermux”，点击右下角“选择”）</sub>：点击左上角“三横杠”，选择“home”，点击“我的博客”进入。找到<code>_config.yml</code>，打开方式选择“<code>Markor</code>或者<code>Acode</code>或者<code>MT管理器</code>”<sub>（我个人更推荐使用Markor）</sub>，将language后面的en修改为zh-CN，站点名称及作者名称也改成自己的；下拉到底部，将theme后面的landscape修改为下载的主题名称，如next。</p>
+<p>（1）使用<code>质感文件</code>或者<code>MT管理器</code>打开博客文件夹。这里以<code>质感文件</code>为例<sub>（初次使用，需进行相关设置，才能访问到博客文件夹。设置方法：点击质感文件左上角“三横杠”，点击“添加存储”，选择“外部存储”；再点击左上角“三横杠”，选择“ZeroTermux”，点击右下角“选择”）</sub>：点击左上角“三横杠”，选择“home”，点击“我的博客”进入。找到<code>_config.yml</code>，打开方式选择“<code>Markor</code>或者<code>Acode</code>或者<code>MT管理器</code>”，将language后面的en修改为zh-CN，站点名称及作者名称也改成自己的；下拉到底部，将theme后面的landscape修改为下载的主题名称，如next。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: 家乡印象⛽</span><br><span class="line">subtitle: &#x27;一个记录家乡故事的小站&#x27;</span><br><span class="line">description: &#x27;📔家乡记忆 | 📚汇集整理&#x27;</span><br><span class="line">keywords:</span><br><span class="line">author: 收录客</span><br><span class="line">language: zh-CN</span><br><span class="line">timezone: &#x27;&#x27;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: next</span><br></pre></td></tr></table></figure>
@@ -726,7 +726,7 @@
 <p>博客在本地搭建好后，要想别人也能访问你的站点，需将你的站点部署到GitHub上面。而部署到GitHub上面，需要先在<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>官网注册一个<code>GitHub账号</code><sub>（可以用QQ邮箱注册）</sub>，然后创建一个<code>仓库</code>。<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>官网打不开的，可以使用<code>海鸥加速器</code>或者<code>Edge加速器</code>进行辅助。</p>
 <p>登录自己的<code>GitHub</code>账号，然后点击GitHub主页右侧的<code>Create repository</code>。在Repository name下面填写<code>GitHub名+github.io</code><sub>（仓库名和GitHub账号名需保持一致，如dllishi.github.io）</sub>，选择<code>Public</code>，勾选<code>Add a README file</code>，然后点击<code>Create repository</code>即可完成仓库创建。</p>
 <p>2、生成令牌</p>
-<p>打开ZeroTermux软件，在界面输入<code>git config --global user.name “这里填写你注册Git账号时所使用的名称</code>”，回车；输入<code>git config --global user.email“这里填写你注册Git账号时所使用的邮箱</code>”，回车；输入<code>ssh-keygen -t rsa -C “这里填写你注册Git账号时所使用的邮箱</code>”，回车<sub>（遇到停顿，继续按回车键）</sub>；输入<code>vim /data/data/com.termux/files/home/.ssh/id_rsa.pub</code><sub>（注意vim后面需空一格）</sub>，回车。复制里面所有字符，按下键盘的<code>ESC</code>键和<code>:wq</code>键，回车退出。</p>
+<p>打开ZeroTermux软件，在界面输入<code>git config --global user.name “这里填写你注册Git账号时所使用的名称</code>”，回车；输入<code>git config --global user.email“这里填写你注册Git账号时所使用的邮箱</code>”，回车；输入<code>ssh-keygen -t rsa -C “这里填写你注册Git账号时所使用的邮箱</code>”，回车<sub>（如遇到停顿，按回车键继续）</sub>；输入<code>vim /data/data/com. termux/files/home/.ssh/id_rsa. pub</code><sub>（注意vim后面需空一格）</sub>，回车。复制里面所有字符，按下键盘的<code>ESC</code>键和<code>:wq</code>键，回车。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name “你的Git账号名称”</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.email “你的邮箱”</span><br></pre></td></tr></table></figure>
@@ -747,8 +747,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 
 <p>6、站点推送</p>
-<p>在ZeroTermux界面输入<code>hexo clean &amp;&amp; hexo g-d</code>组合指令，也可以输入hexo clean &amp;&amp; hexo g &amp;&amp; hexo s，先在本地预览，确认无误再推送。当出现<code>Username for &#39;https://github.com&#39;:</code>提示时，填写你注册Git账号时用的<code>邮箱</code>，回车；当出现<code>Password for &#39;https://github.com&#39;:</code>时，填写你获取的<code>令牌</code>，回车；当出现<code>Deploy done：git</code>时，说明你已经推送成功了。输入你的GitHub仓库地址，即可访问了。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g-d</span><br></pre></td></tr></table></figure>
+<p>在ZeroTermux界面输入<code>hexo clean &amp;&amp; hexo g-d</code>组合指令，也可以输入<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>，先在本地预览，确认无误再推送。当出现<code>Username for &#39;https://github.com&#39;:</code>提示时，填写你注册Git账号时用的<code>邮箱</code>，回车；当出现<code>Password for &#39;https://github.com&#39;:</code>时，填写你获取的<code>令牌</code>，回车；当出现<code>Deploy done：git</code>时，说明你已经推送成功了。输入你的GitHub仓库地址，即可访问了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
     </div>
     <div>
       
