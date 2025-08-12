@@ -1369,7 +1369,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ffdf7c;
+    background: #ffff39;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3577,19 +3577,19 @@ header.header {
   background: rgba(255,255,255,0.8);
 }
 .sidebar {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 /* 文章透明度 */
 .main-inner {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 /* 搜索透明度 */
 .popup {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 /* 代码块透明度 */
 figure.highlight {
-  opacity: 0.7;
+  opacity: 0.9;
 }
 /* 友情链接 */
 .flinks-block .flinks-header {
