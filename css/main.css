@@ -1369,7 +1369,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #f72af0;
+    background: #ffdf7c;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3012,7 +3012,7 @@ header.header {
 }
 /* 背景图片设置 */
 body {
-  background-image: url("https://s3.bmp.ovh/imgs/2024/12/08/6a6adfdfb1e22220.jpeg");
+  background-image: url("https://s3.bmp.ovh/imgs/2025/08/12/74b34646721ae17c.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
@@ -3577,19 +3577,19 @@ header.header {
   background: rgba(255,255,255,0.8);
 }
 .sidebar {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 /* 文章透明度 */
 .main-inner {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 /* 搜索透明度 */
 .popup {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 /* 代码块透明度 */
 figure.highlight {
-  opacity: 0.9;
+  opacity: 0.7;
 }
 /* 友情链接 */
 .flinks-block .flinks-header {
