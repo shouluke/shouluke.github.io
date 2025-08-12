@@ -1369,7 +1369,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ffff39;
+    background: #74ee62;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2951,7 +2951,6 @@ header.header {
   padding-left: 0.5rem;
   padding-right: 1rem;
   border-radius: 1rem;
-  box-shadow: 5px 5px 10px rgba(0,0,0,0.5) inset;
   font-size: 1rem;
   border: 0.1rem solid #000;
   overflow: hidden;
@@ -2989,7 +2988,7 @@ header.header {
   color: #f0f;
 }
 .fa-bookmark {
-  color: #0f0;
+  color: #ccf;
 }
 .fa-link {
   color: #6a3427;
@@ -3577,19 +3576,19 @@ header.header {
   background: rgba(255,255,255,0.8);
 }
 .sidebar {
-  opacity: 0.9;
+  opacity: 1;
 }
 /* 文章透明度 */
 .main-inner {
-  opacity: 0.9;
+  opacity: 1;
 }
 /* 搜索透明度 */
 .popup {
-  opacity: 0.9;
+  opacity: 1;
 }
 /* 代码块透明度 */
 figure.highlight {
-  opacity: 0.9;
+  opacity: 1;
 }
 /* 友情链接 */
 .flinks-block .flinks-header {
