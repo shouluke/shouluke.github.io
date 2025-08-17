@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-bounce.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous" defer></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"nxdaolin.dpdns.org","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.24.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":258,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"night-owl","dark":"night-owl"},"prism":{"light":"prism-material-light","dark":"prism-night-owl"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"bounceIn","post_block":"zoomInUp","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"zoomInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"nxdaolin.dpdns.org","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.24.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":258,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"night-owl","dark":"night-owl"},"prism":{"light":"prism-material-light","dark":"prism-night-owl"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":true,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"bounceIn","post_block":"zoomInUp","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"rollIn"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js" defer></script>
 
     <meta name="description" content="文章摘要本教程基于安卓端设备，使用ZeroTermux软件搭建Hexo框架博客。整个博客搭建、代码修改、文章编辑、推送部署，都可以直接在手机上操作。">
 <meta property="og:type" content="article">
@@ -71,8 +71,10 @@
 
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdnjs.cloudflare.com/ajax/libs/ribbon.js/1.0.2/ribbon.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/6.0.17/fancybox/fancybox.umd.js" integrity="sha256-32A/chfN6JgQkwK/QFZY8siVcOZj3LUt1vSKIcDvshM=" crossorigin="anonymous" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous" defer></script>
 <script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.5.0/search.js" integrity="sha256-xFC6PJ82SL9b3WkGjFavNiA9gm5z6UBxWPiu4CYjptg=" crossorigin="anonymous" defer></script>
@@ -102,7 +104,7 @@
 <script src="/js/third-party/math/mathjax.js" defer></script>
 
 
-<link rel="stylesheet" type="text/css" href="/css/injector/main.css" /><link rel="preload" as="style" href="/css/injector/light.css" /><link rel="preload" as="style" href="/css/injector/dark.css" />
+<link rel="dns-prefetch" href="https://waline.nxdaolin.dpdns.org/"><link rel="stylesheet" type="text/css" href="/css/injector/main.css" /><link rel="preload" as="style" href="/css/injector/light.css" /><link rel="preload" as="style" href="/css/injector/dark.css" />
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -640,6 +642,20 @@
     </span>
 
   
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/posts/38769c4b.html#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/posts/38769c4b.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
@@ -679,8 +695,8 @@
 <p>打开ZeroTermux软件，在界面输入<code>pkg upgrade &amp;&amp; pkg update &amp;&amp; pkg install nodejs &amp;&amp; pkg install git &amp;&amp; pkg install vim</code>组合指令<sub>（既可以组合输入，也可以单独输入）</sub>，回车。此时会自动下载，在下载安装过程中，凡停顿出现英文提示，一律按“y”键继续，直到全部安装完毕。例如：当出现Do you want to continue？[ Y&#x2F;n ]提示时，按y键，回车；当出现*** openssl.cnf（Y&#x2F;I&#x2F;N&#x2F;O&#x2F;D&#x2F;Z）[ default&#x3D;N ]？提示时，按y键，回车……。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkg upgrade &amp;&amp; pkg update &amp;&amp; pkg install nodejs &amp;&amp; pkg install git &amp;&amp; pkg install vim</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/1c93ab21eef7ab00.png"></p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/9c92c611b40758fd.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/1c93ab21eef7ab00.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/9c92c611b40758fd.png"></p>
 <p><strong>2、创建文件夹</strong></p>
 <p>输入<code>mkdir 我的博客</code><sub>（文件夹名称可以随意取）</sub>，回车；输入<code>cd 我的博客</code>，回车。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir 我的博客</span><br></pre></td></tr></table></figure>
@@ -695,12 +711,12 @@
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/1984b78f0238cc4b.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/1984b78f0238cc4b.png"></p>
 <p><strong>4、运行站点</strong></p>
 <p>输入<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>组合指令<sub>（既可以组合输入，也可以单独输入）</sub>，复制生成的<a target="_blank" rel="noopener" href="http://localhost:4000/%E7%BD%91%E5%9D%80%EF%BC%8C%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%93%E5%BC%80%E5%8D%B3%E5%8F%AF%E3%80%82">http://localhost:4000/网址，用浏览器打开即可。</a></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/38f6bb4568007827.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/38f6bb4568007827.png"></p>
 <p>浏览博客，推荐使用<code>Via浏览器</code>或者<code>X浏览器</code>；管理文件，推荐使用<code>质感文件</code>或者<code>MT管理器</code>；文章编辑，推荐使用<code>Markor</code>、<code>坚果云Markdown</code>、<code>QuickEdit</code>；代码修改，推荐使用<code>Acode</code>、<code>Markor</code>、<code>MT管理器</code>、<code>QuickEdit</code>；辅助工具，推荐使用<code>海鸥加速器</code>、<code>Edge加速器</code>；文档识别：推荐使用“<code>vFlat Scan</code>”、“<code>Apus</code>”。</p>
 <h3 id="二、更换主题"><a href="#二、更换主题" class="headerlink" title="二、更换主题"></a>二、更换主题</h3><p><strong>1、下载主题</strong></p>
 <p>用浏览器打开<a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo官网主题专区</a>，搜索自己喜欢的主题。这里以<a target="_blank" rel="noopener" href="https://github.com/next-theme/hexo-theme-next">NexT主题</a>为例。复制<code>git clone https://github.com/next-theme/hexo-theme-next themes/next</code>，打开ZeroTermux软件，在界面粘贴git clone https :&#x2F;&#x2F;github.com&#x2F;next-theme&#x2F;hexo-theme-next themes&#x2F;next，回车，等待主题下载完成。</p>
@@ -713,7 +729,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># <span class="title class_">Extensions</span></span><br><span class="line">## <span class="title class_">Plugins</span>: <span class="attr">https</span>:<span class="comment">//hexo.io/plugins/</span></span><br><span class="line">## <span class="title class_">Themes</span>: <span class="attr">https</span>:<span class="comment">//hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme</span>: next</span><br></pre></td></tr></table></figure>
 
 <p>（2）打开博客的<code>themes</code>文件夹，点击<code>next</code>文件夹，复制里面的<code>_config.yml</code>到手机<sub>（内部存储设备）</sub>的任意文件夹，将名称修改为<code>_config.next.yml</code>，然后再放回博客根目录里面。</p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/e6decd0a99949868.jpg"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/25/e6decd0a99949868.jpg"></p>
 <p>输入<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo s</code>组合指令<sub>（既可以组合输入，也可以单独输入）</sub>，回车。复制生成的<a target="_blank" rel="noopener" href="http://localhost:4000/%E7%BD%91%E5%9D%80%EF%BC%8C%E7%94%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%93%E5%BC%80">http://localhost:4000/网址，用浏览器打开</a><sub>（推荐使用Via浏览器或X浏览器）</sub>，即可看到更改了主题的页面。</p>
 <h3 id="三、创建文章"><a href="#三、创建文章" class="headerlink" title="三、创建文章"></a>三、创建文章</h3><p>1、打开ZeroTermux软件，在界面输入<code>hexo new （你的博客文章标题）</code><sub>〔如：hexo new 安卓手机使用ZeroTermux搭建Hexo框架博客教程（2025版）〕</sub>，回车。</p>
 <p>2、使用<code>质感文件</code>或者<code>MT管理器</code>打开博客文件夹，在博客source的_posts文件夹里找到刚才创建好的文章，选择用<code>Markor</code>或<code>坚果云Markdown</code>打开该文章进行编辑。<code>Markor</code>或<code>坚果云Markdown</code>自带常用的Markdown语法，可以直接插入文中使用。如果是摘抄书本或报刊杂志的内容，先用<code>vFlat Scan</code>进行扫描，然后用<code>Apus</code>进行文字提取，也可以直接拍张照片，然后用<code>Apus</code>进行文字提取，可以省去打字烦恼。</p>
@@ -731,14 +747,14 @@
 
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /data/data/com.termux/files/home/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/5467eb4e4cfbd753.png"></p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/e0a5e61899e3f206.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/5467eb4e4cfbd753.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/e0a5e61899e3f206.png"></p>
 <p>3、获取令牌</p>
 <p>回到<a target="_blank" rel="noopener" href="https://github.com/">GitHub</a>官网。点击右上角<code>头像</code>，然后点击列表中的<code>Settings</code>；点击左侧的<code>SSH and GPG keys</code>，点击右侧的<code>New SSH key</code>，在Title下面随便填一个名字，在Key里粘贴在本地生成的那一大串字符，然后按<code>Add SSH key</code>。点击页面左侧最底部的<code>Developer settings</code>，点击<code>Personal access tokens</code>，点击<code>Tokens（classic）</code>，点击<code>Generate new token</code>，在<code>NewPersonal access tokens（classic）</code>的<code>Note</code>下面随便填一个名字，在<code>Select scopes</code>下面勾选所有选项，然后按<code>Generate token</code>。复制<code>Personal access tokens（classic）</code>下面生成的令牌，保存到记事本或微信或QQ空间。注意：一个令牌期限是一个月，令牌到期后，需要重新申请一个新的令牌。</p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/ddb79f85c0c42066.png"></p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/1e8a99b134378de2.png"></p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/59c94d2a37e32d55.png"></p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/0f8a8cbafc9c9ade.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/ddb79f85c0c42066.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/1e8a99b134378de2.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/59c94d2a37e32d55.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/0f8a8cbafc9c9ade.png"></p>
 <p>4、修改配置</p>
 <p>使用<code>质感文件</code>或者<code>MT管理器</code>打开博客文件夹，找到Hexo根目录的<code>_config.yml</code>文件，在<code>deploy</code><sub>下面填写你的Git名及仓库地址（可参考下面的）</sub></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># <span class="title class_">Deployment</span></span><br><span class="line">## <span class="title class_">Docs</span>: <span class="attr">https</span>:<span class="comment">//hexo.io/docs/one-command-deployment</span></span><br><span class="line"><span class="attr">deploy</span>:</span><br><span class="line">  <span class="attr">type</span>: <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repo</span>: <span class="attr">https</span>:<span class="comment">//github.com/shouluke/shouluke.github.io.git</span></span><br><span class="line">  <span class="attr">branch</span>: main</span><br></pre></td></tr></table></figure>
@@ -751,9 +767,9 @@
 <p>在ZeroTermux界面输入<code>hexo clean &amp;&amp; hexo g -d</code>组合指令<sub>（也可以输入hexo clean &amp;&amp; hexo g &amp;&amp; hexo s，先在本地预览，确认无误再推送）</sub>，回车。当出现<code>Username for &#39;https://github.com&#39;:</code>提示时，填写你注册Git账号时用的<code>邮箱</code>，回车；当出现<code>Password for &#39;https://github.com&#39;:</code>时，填写你获取的<code>令牌</code>，回车；当出现<code>Deploy done：git</code>时，说明你已经推送成功了。输入你的GitHub仓库地址，即可访问了。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g -d</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/6aa4486582b7acfb.png"></p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/22aeabd718082890.png"></p>
-<p><img src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/25d029c07aea219e.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/6aa4486582b7acfb.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/22aeabd718082890.png"></p>
+<p><img data-src="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2025/06/29/25d029c07aea219e.png"></p>
 
     </div>
     <div>
@@ -830,6 +846,7 @@
 
 
 
+    <div class="comments" id="waline"></div>
 </div>
   </main>
 
@@ -840,7 +857,7 @@
     &copy; 1900 – 
     <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
-      <i class="fa fa-heart"></i>
+      <i class="fa-brands fa-apple"></i>
     </span>
     <span class="author" itemprop="copyrightHolder">收录客</span>
   </div>
@@ -883,6 +900,17 @@
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-CN","enable":true,"serverURL":"https://waline.nxdaolin.dpdns.org/","cssUrl":"https://unpkg.com/@waline/client@v3/dist/waline.css","commentCount":true,"pageview":false,"libUrl":"https://unpkg.com/@waline/client@v3/dist/waline.umd.js","locale":{"link":"网址 / B 站 UID","placeholder":"发条评论吧 (=・ω・=)","submit":"发布","like":"点赞","cancelLike":"取消点赞","admin":"可爱的管理员","reaction0":"点赞","reaction1":"doge","reaction2":"疑问","reaction3":"微笑","reaction4":"难过","reaction5":"调侃","reaction6":"思考"},"el":"#waline","comment":true,"path":"/posts/38769c4b.html"}</script>
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css">
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() =>
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => 
+    Waline.init(Object.assign({}, CONFIG.waline,{ el: document.querySelector(CONFIG.waline.el) }))
+  );
+});
+</script>
 <div class="moon-menu">
   <div class="moon-menu-items">
     
