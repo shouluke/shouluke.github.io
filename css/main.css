@@ -1342,7 +1342,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #fbf4e4;
+    background: #f52457;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2976,6 +2976,9 @@ header.header {
 }
 .fa-address-card {
   color: #9b59b6;
+}
+.fa-pen {
+  color: #000;
 }
 /* 网站作者姓名颜色 */
 .site-author-name {
