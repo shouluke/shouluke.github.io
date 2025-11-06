@@ -31,7 +31,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2024/01/05/57ba37a96dc89b2a.jpg">
 <meta property="article:published_time" content="2024-07-21T02:57:34.000Z">
-<meta property="article:modified_time" content="2025-11-06T10:21:30.422Z">
+<meta property="article:modified_time" content="2025-11-06T10:38:00.334Z">
 <meta property="article:author" content="收录客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://images.weserv.nl/?url=https://s3.bmp.ovh/imgs/2024/01/05/57ba37a96dc89b2a.jpg">
@@ -638,7 +638,7 @@
   </head>
   <body>
     <div class="vertical-text">
-      <div><button type="button">本站信息</button></div>
+      <div>本站信息</div>
     </div>
     <center>
       <mark class="label darkblue">📔家乡记忆</mark>
@@ -865,11 +865,10 @@
 <style>
     .tag-cloud-tags {
         text-align: center;
-        position: relative; /* 为子元素定位提供基准 */
+        counter-reset: tags;
     }
 
     .tag-cloud-tags a {
-        position: relative; /* 为阴影伪元素定位 */
         border-radius: 6px;
         padding: 4px 12px;
         margin: 10px 8px;
@@ -878,7 +877,6 @@
         text-shadow: 0 1px 1px rgba(0,0,0,0.1);
         border: 1px solid rgba(0,0,0,0.05);
         transition: all 0.3s ease;
-        background: inherit; /* 继承JS设置的背景色 */
     }
 
     /* 模糊阴影伪元素 */

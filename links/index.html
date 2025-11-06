@@ -871,11 +871,10 @@ function show() {
 <style>
     .tag-cloud-tags {
         text-align: center;
-        position: relative; /* 为子元素定位提供基准 */
+        counter-reset: tags;
     }
 
     .tag-cloud-tags a {
-        position: relative; /* 为阴影伪元素定位 */
         border-radius: 6px;
         padding: 4px 12px;
         margin: 10px 8px;
@@ -884,7 +883,6 @@ function show() {
         text-shadow: 0 1px 1px rgba(0,0,0,0.1);
         border: 1px solid rgba(0,0,0,0.05);
         transition: all 0.3s ease;
-        background: inherit; /* 继承JS设置的背景色 */
     }
 
     /* 模糊阴影伪元素 */
