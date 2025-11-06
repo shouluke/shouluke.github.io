@@ -785,86 +785,67 @@
 	</div>
 </div>
       </div>
-        <script type="text/javascript">
-     var alltags = document.getElementsByClassName('tag-cloud-tags');
-     var tags = alltags[0].getElementsByTagName('a');
-     for (var i = tags.length - 1; i >= 0; i--) {
-       var golden_ratio = 0.618033988749895;
-       var s = 0.5;
-       var v = 0.999;
-       var h = golden_ratio + Math.random()*0.8 - 0.5;
-       var h_i = parseInt(h * 6);
-       var f = h * 6 - h_i;
-       var p = v * (1 - s);
-       var q = v * (1 - f * s);
-       var t = v * (1 - (1 - f) * s);
-       var r, g, b;
-       switch (h_i) {
-          case 0:
-              r = v;
-              g = t;
-              b = p;
-              break;
-          case 1:
-              r = q;
-              g = v;
-              b = p;
-              break;
-          case 2:
-              r = p;
-              g = v;
-              b = t;
-              break;
-          case 3 :
-              r = p;
-              g = q;
-              b = v;
-              break;
-          case 4:
-              r = t;
-              g = p;
-              b = v;
-              break;
-          case 5:
-              r = v;
-              g = p;
-              b = q;
-              break;
-          default:
-              r = 1;
-              g = 1;
-              b = 1;
-        }
-       tags[i].style.background = "rgba("+parseInt(r*255)+","+parseInt(g*255)+","+parseInt(b*255)+","+0.5+")";
-     }
-</script>
- 
-<style>
-  .tag-cloud-tags{
-    text-align: center;
-    counter-reset: tags;
-  }
-  .tag-cloud-tags a{
-    display: inline-block;
-    border: 0px;
-    border-radius: 10px;
-    padding: 0px 10px;
-    margin: 8px;
-    color: rgba(34, 34, 34, 0.8);
+      <script type="text/javascript">
+    var alltags = document.getElementsByClassName('tag-cloud-tags');
+    var tags = alltags[0].getElementsByTagName('a');
+    for (var i = tags.length - 1; i >= 0; i--) {
+        var r=Math.floor(Math.random()*100 + 156);
+        var g=Math.floor(Math.random()*100 + 156);
+        var b=Math.floor(Math.random()*100 + 156);
+        tags[i].style.background = "rgb("+r+","+g+","+b+")";
+        tags[i].style.color = getContrastColor(r, g, b);
+    }
     
-  }
-/* 文字前添加相应的符号，content后的Unicode可以自定义*/
-  .tag-cloud-tags a:before{
-    font-family: 'Font Awesome 5 Free';
-    content: "\f02b";
-    font-weight: 900;
-  }
- 
-  .tag-cloud-tags a:hover{
-     box-shadow: 0px 5px 15px 0px rgba(0,0,0,.4);
-     transform: scale(1.1);
-     transition-duration: 0.15s;
-  }
+    function getContrastColor(r, g, b) {
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        return yiq >= 150 ? '#222' : '#fff';
+    }
+</script>
+
+<style>
+    .tag-cloud-tags {
+        text-align: center;
+        position: relative; /* 为子元素定位提供基准 */
+    }
+
+    .tag-cloud-tags a {
+        position: relative; /* 为阴影伪元素定位 */
+        border-radius: 6px;
+        padding: 4px 12px;
+        margin: 10px 8px;
+        display: inline-block;
+        font-weight: 600;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+        border: 1px solid rgba(0,0,0,0.05);
+        transition: all 0.3s ease;
+        background: inherit; /* 继承JS设置的背景色 */
+    }
+
+    /* 模糊阴影伪元素 */
+    .tag-cloud-tags a::after {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: inherit;
+        filter: blur(8px);
+        opacity: 0.7;
+        z-index: -1;
+        transition: all 0.3s ease;
+    }
+
+    /* 悬停时放大阴影 */
+    .tag-cloud-tags a:hover {
+        transform: translateY(-2px) scale(1.05);
+    }
+    
+    .tag-cloud-tags a:hover::after {
+        transform: scale(0.95);
+        opacity: 0.9;
+        filter: blur(12px);
+    }
 </style>
       
       

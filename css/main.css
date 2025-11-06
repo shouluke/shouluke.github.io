@@ -1378,7 +1378,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #f11bff;
+    background: #ffe321;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3273,10 +3273,10 @@ details > div.details {
   padding: 0 10px;
 }
 /* label标签样式 */
-.label.default {
+.label.yellow {
   margin-left: 1%;
   margin-right: 2.5%;
-  background-color: #777 !important;
+  background-color: #cc0 !important;
   font-size: 18px !important;
   display: inline;
   padding: 0.5em 1.2em 0.5em;
@@ -3288,7 +3288,22 @@ details > div.details {
   vertical-align: baseline;
   border-radius: 0.25em;
 }
-.label.primary {
+.label.lightblue {
+  margin-left: 1%;
+  margin-right: 2.5%;
+  background-color: #09f !important;
+  font-size: 18px !important;
+  display: inline;
+  padding: 0.5em 1.2em 0.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label.darkblue {
   margin-left: 1%;
   margin-right: 2.5%;
   background-color: #337ab7 !important;
@@ -3303,10 +3318,10 @@ details > div.details {
   vertical-align: baseline;
   border-radius: 0.25em;
 }
-.label.success {
+.label.blue {
   margin-left: 1%;
   margin-right: 2.5%;
-  background-color: #5cb85c !important;
+  background-color: #00f !important;
   font-size: 18px !important;
   display: inline;
   padding: 0.5em 1.2em 0.5em;
@@ -3318,10 +3333,10 @@ details > div.details {
   vertical-align: baseline;
   border-radius: 0.25em;
 }
-.label.info {
+.label.pink {
   margin-left: 1%;
   margin-right: 2.5%;
-  background-color: #5bc0de !important;
+  background-color: #da70d6 !important;
   font-size: 18px !important;
   display: inline;
   padding: 0.5em 1.2em 0.5em;
@@ -3333,25 +3348,85 @@ details > div.details {
   vertical-align: baseline;
   border-radius: 0.25em;
 }
-.label.warning {
-  margin-left: 1%;
-  margin-right: 2.5%;
-  background-color: #f0ad4e !important;
-  font-size: 18px !important;
-  display: inline;
-  padding: 0.5em 1.2em 0.5em;
-  font-weight: bold;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: 0.25em;
-}
-.label.danger {
+.label.lightred {
   margin-left: 1%;
   margin-right: 2.5%;
   background-color: #d9534f !important;
+  font-size: 18px !important;
+  display: inline;
+  padding: 0.5em 1.2em 0.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label.red {
+  margin-left: 1%;
+  margin-right: 2.5%;
+  background-color: #f00 !important;
+  font-size: 18px !important;
+  display: inline;
+  padding: 0.5em 1.2em 0.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label.purple {
+  margin-left: 1%;
+  margin-right: 2.5%;
+  background-color: #8a2be2 !important;
+  font-size: 18px !important;
+  display: inline;
+  padding: 0.5em 1.2em 0.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label.orange {
+  margin-left: 1%;
+  margin-right: 2.5%;
+  background-color: #ff8000 !important;
+  font-size: 18px !important;
+  display: inline;
+  padding: 0.5em 1.2em 0.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+.label.green {
+  margin-left: 1%;
+  margin-right: 2.5%;
+  background-color: #4cbb17 !important;
+  font-size: 18px !important;
+  display: inline;
+  padding: 0.5em 1.2em 0.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
+label.lightgreen {
+  margin-left: 1%;
+  margin-right: 2.5%;
+  background-color: #5cb85c !important;
   font-size: 18px !important;
   display: inline;
   padding: 0.5em 1.2em 0.5em;
@@ -3469,15 +3544,6 @@ blockquote {
 }
 .category-list-link {
   border-bottom: 0;
-}
-/* 圆形方框标签 */
-.tag-cloud a {
-  box-shadow: 0 1px 3px #6f42c1, 0 1px 2px #d9534f;
-  padding: 2px 10px;
-  margin: 8px;
-  background: rgba(193,66,92,0);
-  border-bottom: none;
-  border-radius: 20px;
 }
 /* code样式 */
 p>code,
