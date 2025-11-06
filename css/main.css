@@ -1378,7 +1378,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #fe7d25;
+    background: #2fd0ff;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2961,7 +2961,7 @@ header.header {
 .menu .menu-item span.exturl {
   padding-left: 0.5rem;
   padding-right: 1rem;
-  border-radius: 1rem;
+  border-radius: 8px;
   box-shadow: 5px 5px 10px rgba(0,0,0,0.5) inset;
   font-size: 1rem;
   border: 0.1rem solid #000;
@@ -3183,7 +3183,7 @@ span.exturl>:hover {
   color: #49b1f5;
   background: #fff;
   border: 2px solid #49b1f5;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 .btn:hover {
   border-color: #49b1f5;
@@ -3213,7 +3213,7 @@ span.exturl>:hover {
   margin: 5px;
   background: #f5f5f5;
   border-bottom: none;
-  border-radius: 15px;
+  border-radius: 8px;
 }
 @media (max-width: 767px) {
   .posts-expand .post-tags a {
@@ -3231,7 +3231,7 @@ span.exturl>:hover {
 /* 文本内容折叠框样式 */
 :not(.highlight) > div.table-container {
   border: 2px solid #ddd;
-  border-radius: 10px;
+  border-radius: 8px;
   margin: 0 0 20px;
 }
 table {
@@ -3505,7 +3505,7 @@ blockquote {
   text-align: center;
 }
 .category-all-page .category-list-item {
-  border-radius: 10px;
+  border-radius: 8px;
   margin: 15px 20px;
   padding: 20px 20px 20px 30px;
   height: 40px;
@@ -3619,7 +3619,7 @@ strong {
   font-size: 15px;
   color: #222;
   background: rgba(255,255,255,0.3);
-  border-radius: 7px;
+  border-radius: 8px;
   border: 1px solid #222;
   box-shadow: 0 8px 20px -8px rgba(0,0,0,0.3);
 }
