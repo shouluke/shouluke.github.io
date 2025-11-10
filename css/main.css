@@ -1378,7 +1378,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #b09f36;
+    background: #04c225;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3273,6 +3273,21 @@ details > div.details {
   padding: 0 10px;
 }
 /* label标签样式 */
+.label.black {
+  margin-left: 1%;
+  margin-right: 2.5%;
+  background-color: #000 !important;
+  font-size: 18px !important;
+  display: inline;
+  padding: 0.5em 1.2em 0.5em;
+  font-weight: bold;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25em;
+}
 .label.yellow {
   margin-left: 1%;
   margin-right: 2.5%;
@@ -3855,7 +3870,7 @@ a.badge a {
   background: 0 0;
 }
 a.badge img.badge {
-  border-radius: 5px;
+  border-radius: 8px;
   display: inline;
 }
 a.badge embed,

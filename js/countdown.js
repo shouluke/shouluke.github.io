@@ -49,7 +49,7 @@ const CountdownTimer = (() => {
                 align-items: center;
                 justify-content: center;
                 border: 1px solid #000;
-                border-radius: 10px;
+                border-radius: 8px;
             }
             .cd-count-left .cd-text {
                 font-size: 14px;
