@@ -1378,7 +1378,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #70ccff;
+    background: #ffff9c;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -3837,34 +3837,6 @@ strong {
     display: none;
   }
 }
-/* 页脚徽章 */
-a.badge {
-  border-bottom: none;
-  margin: 10px 5px;
-}
-a.badge a {
-  color: var(--link-color);
-  cursor: pointer;
-  outline: 0;
-  text-decoration: none;
-  overflow-wrap: break-word;
-  background: 0 0;
-}
-a.badge img.badge {
-  border-radius: 8px;
-  display: inline;
-}
-a.badge embed,
-a.badge iframe,
-a.badge img,
-a.badge video {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
-a.badge img {
-  border-style: none;
-}
 /* 文章加密摘要样式 */
 .article_encrypt_abstract {
   text-align: center;
@@ -3972,7 +3944,7 @@ a.badge img {
 }
 /* 深色模式（Dark Mode）日转夜动画 */
 .Cuteen_DarkSky,
-.Cuteen_DarkSky:before> {
+.Cuteen_DarkSky:before {
   content: '';
   position: fixed;
   left: 0;
