@@ -1,7 +1,7 @@
 const CountdownTimer = (() => {
     const config = {
-        targetDate: "2026-04-05",
-        targetName: "清明节",
+        targetDate: "2026-05-01",
+        targetName: "劳动节",
     };
 
     function updateCountdown() {
